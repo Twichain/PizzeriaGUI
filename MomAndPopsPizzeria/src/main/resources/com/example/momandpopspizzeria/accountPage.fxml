@@ -8,7 +8,7 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<Pane fx:id="child" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1">
+<Pane fx:id="child" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.momandpopspizzeria.Controllers.accountController">
    <children>
       <GridPane layoutX="4.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1052.0" style="-fx-border-insets: solid;">
         <columnConstraints>
@@ -25,7 +25,7 @@
             <RowConstraints maxHeight="289.0" minHeight="10.0" prefHeight="177.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label text="ACCOUNT INFORMATION" textOverrun="CLIP" translateX="-50.0" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+            <Label fx:id="accountInformation" text="ACCOUNT INFORMATION" textOverrun="CLIP" translateX="-50.0" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
                <font>
                   <Font size="48.0" />
                </font>
@@ -33,7 +33,7 @@
                   <Insets right="-50.0" />
                </GridPane.margin>
             </Label>
-            <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="66.0" GridPane.halignment="LEFT">
+            <Button fx:id="home" mnemonicParsing="false" onAction="#onHomeButtonClick" prefHeight="42.0" prefWidth="66.0" GridPane.halignment="LEFT">
                <graphic>
                   <ImageView fitHeight="70.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true" />
                </graphic>
@@ -41,7 +41,7 @@
                   <Insets left="20.0" />
                </GridPane.margin>
             </Button>
-            <Label text="First name*" GridPane.columnIndex="2" GridPane.rowIndex="2">
+            <Label fx:id="firstName" text="First name*" GridPane.columnIndex="2" GridPane.rowIndex="2">
                <textFill>
                   <LinearGradient endX="1.0" endY="0.3459715639810427" startX="0.943127962085308" startY="0.6255924170616114">
                      <stops>
@@ -64,8 +64,8 @@
                   </LinearGradient>
                </textFill>
             </Label>
-            <Label text="Last name" GridPane.rowIndex="3" />
-            <Label text="Phone Number*" GridPane.rowIndex="2">
+            <Label fx:id="lastName" text="Last name" GridPane.rowIndex="3" />
+            <Label fx:id="phoneNumber" text="Phone Number*" GridPane.rowIndex="2">
                <textFill>
                   <LinearGradient endX="1.0" endY="0.3459715639810427" startX="0.943127962085308" startY="0.6255924170616114">
                      <stops>
@@ -88,41 +88,41 @@
                   </LinearGradient>
                </textFill>
             </Label>
-            <Label text="Street Address" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <Label text="City" GridPane.rowIndex="4" />
-            <Label text="State" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-            <Label text="ZipCode" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-            <Label text="[Payment Type]" GridPane.rowIndex="5">
+            <Label fx:id="streetAddress" text="Street Address" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label fx:id="city" text="City" GridPane.rowIndex="4" />
+            <Label fx:id="state" text="State" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Label fx:id="zipCode" text="ZipCode" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label fx:id="paymentType" text="[Preferred Payment Type]" GridPane.rowIndex="5">
                <GridPane.margin>
                   <Insets bottom="50.0" />
                </GridPane.margin>
             </Label>
-            <Button mnemonicParsing="false" prefWidth="93.0" text="Confirm" GridPane.columnIndex="2" GridPane.rowIndex="5">
+            <Button fx:id="confirm" mnemonicParsing="false" onAction="#onConfirmButtonClick" prefWidth="93.0" text="Confirm" GridPane.columnIndex="2" GridPane.rowIndex="5">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <HBox maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" spacing="5.0" style="-fx-border-color: black;" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+            <HBox fx:id="box" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" spacing="5.0" style="-fx-border-color: black;" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
                <children>
-                  <RadioButton mnemonicParsing="false" text="Cash">
+                  <RadioButton fx:id="cash" mnemonicParsing="false" onAction="#onRadioButtonSelected" text="Cash">
                      <HBox.margin>
                         <Insets left="5.0" top="5.0" />
                      </HBox.margin>
                   </RadioButton>
-                  <RadioButton mnemonicParsing="false" text="Check">
+                  <RadioButton fx:id="check" mnemonicParsing="false" onAction="#onRadioButtonSelected" text="Check">
                      <HBox.margin>
                         <Insets left="5.0" top="5.0" />
                      </HBox.margin>
                   </RadioButton>
-                  <RadioButton mnemonicParsing="false" text="Credit Card *dynamic*">
+                  <RadioButton fx:id="creditCard" mnemonicParsing="false" onAction="#onCreditCardRadioSelected" text="Credit Card *dynamic*">
                      <HBox.margin>
                         <Insets left="5.0" top="5.0" />
                      </HBox.margin>
                   </RadioButton>
                </children>
             </HBox>
-            <Label text="*dynamic Credit Card number*" GridPane.columnIndex="1" GridPane.rowIndex="5" GridPane.valignment="TOP" />
-            <TextField alignment="CENTER" promptText="first name" GridPane.columnIndex="2" GridPane.rowIndex="2">
+            <Label fx:id="creditCardNumber" text="*dynamic Credit Card number*" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="5" GridPane.valignment="TOP" />
+            <TextField fx:id="firstNameTextField" alignment="CENTER" promptText="first name" GridPane.columnIndex="2" GridPane.rowIndex="2">
                <GridPane.margin>
                   <Insets left="20.0" right="20.0" top="50.0" />
                </GridPane.margin>
@@ -130,49 +130,49 @@
                   <Insets />
                </opaqueInsets>
             </TextField>
-            <TextField alignment="CENTER" layoutX="10.0" layoutY="203.0" promptText="last name" GridPane.rowIndex="3">
+            <TextField fx:id="lastNameTextField" alignment="CENTER" layoutX="10.0" layoutY="203.0" promptText="last name" GridPane.rowIndex="3">
                <GridPane.margin>
                   <Insets left="20.0" right="20.0" top="50.0" />
                </GridPane.margin>
             </TextField>
-            <TextField alignment="CENTER" promptText="###-###-####" GridPane.rowIndex="2">
+            <TextField fx:id="phoneNumberTextField" alignment="CENTER" promptText="###-###-####" GridPane.rowIndex="2">
                <GridPane.margin>
                   <Insets left="20.0" right="20.0" top="50.0" />
                </GridPane.margin>
             </TextField>
-            <TextField alignment="CENTER" promptText="street address" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <TextField fx:id="streetAddressTextField" alignment="CENTER" promptText="street address" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <GridPane.margin>
                   <Insets left="20.0" right="20.0" top="50.0" />
                </GridPane.margin>
             </TextField>
-            <TextField alignment="CENTER" promptText="city" GridPane.rowIndex="4">
+            <TextField fx:id="cityTextField" alignment="CENTER" promptText="city" GridPane.rowIndex="4">
                <GridPane.margin>
                   <Insets left="20.0" right="20.0" top="50.0" />
                </GridPane.margin>
             </TextField>
-            <TextField alignment="CENTER" promptText="state" GridPane.columnIndex="2" GridPane.rowIndex="3">
+            <TextField fx:id="stateTextField" alignment="CENTER" promptText="state" GridPane.columnIndex="2" GridPane.rowIndex="3">
                <GridPane.margin>
                   <Insets left="20.0" right="20.0" top="50.0" />
                </GridPane.margin>
             </TextField>
-            <TextField alignment="CENTER" promptText="#####" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <TextField fx:id="zipCodeTextField" alignment="CENTER" promptText="#####" GridPane.columnIndex="1" GridPane.rowIndex="4">
                <GridPane.margin>
                   <Insets left="20.0" right="20.0" top="50.0" />
                </GridPane.margin>
             </TextField>
-            <TextField alignment="CENTER" promptText="################ *dynamic*" GridPane.columnIndex="1" GridPane.rowIndex="5" GridPane.valignment="TOP">
+            <TextField fx:id="creditCardNumberTextField" alignment="CENTER" promptText="################ *dynamic*" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="5" GridPane.valignment="TOP">
                <GridPane.margin>
                   <Insets left="20.0" right="20.0" top="20.0" />
                </GridPane.margin>
             </TextField>
-            <Line endX="550.0" startX="-500.0" strokeLineCap="ROUND" strokeMiterLimit="20.0" strokeWidth="2.0" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-            <Label text="*dynamic credit card security number*" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-            <TextField alignment="CENTER" promptText="### *dynmaic*" GridPane.columnIndex="1" GridPane.rowIndex="5">
+            <Line fx:id="headerBorder" endX="550.0" startX="-500.0" strokeLineCap="ROUND" strokeMiterLimit="20.0" strokeWidth="2.0" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+            <Label fx:id="creditCardSecurityNumber" text="*dynamic credit card security number*" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField fx:id="creditCardSecurityNumberTextField" alignment="CENTER" promptText="### *dynmaic*" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="5">
                <GridPane.margin>
                   <Insets left="20.0" right="20.0" top="50.0" />
                </GridPane.margin>
             </TextField>
-            <Label text="Password*" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <Label fx:id="password" text="Password*" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <GridPane.margin>
                   <Insets />
                </GridPane.margin>
@@ -198,11 +198,12 @@
                   </LinearGradient>
                </textFill>
             </Label>
-            <TextField alignment="CENTER" promptText="password" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <TextField fx:id="passwordTextField" alignment="CENTER" promptText="password" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <GridPane.margin>
                   <Insets left="20.0" right="20.0" top="50.0" />
                </GridPane.margin>
             </TextField>
+            <Label fx:id="accountSuccess" text="*dynamic confirmation*" GridPane.columnIndex="2" GridPane.rowIndex="4" />
          </children>
       </GridPane>
    </children>
