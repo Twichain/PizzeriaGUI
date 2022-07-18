@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<Pane fx:id="child" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <GridPane layoutX="4.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1052.0" style="-fx-border-insets: solid;">
+        <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="644.0" minWidth="10.0" prefWidth="301.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="603.0" minWidth="10.0" prefWidth="495.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="368.0" minWidth="10.0" prefWidth="256.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="142.0" minHeight="10.0" prefHeight="99.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="151.0" minHeight="0.0" prefHeight="44.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="351.0" minHeight="3.0" prefHeight="119.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="350.0" minHeight="10.0" prefHeight="144.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="295.0" minHeight="0.0" prefHeight="137.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="289.0" minHeight="10.0" prefHeight="177.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="ACCOUNT INFORMATION" textOverrun="CLIP" translateX="-50.0" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+               <font>
+                  <Font size="48.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets right="-50.0" />
+               </GridPane.margin>
+            </Label>
+            <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="66.0" GridPane.halignment="LEFT">
+               <graphic>
+                  <ImageView fitHeight="70.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </Button>
+            <Label text="First name*" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <textFill>
+                  <LinearGradient endX="1.0" endY="0.3459715639810427" startX="0.943127962085308" startY="0.6255924170616114">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.007662835249042145">
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <Label text="Last name" GridPane.rowIndex="3" />
+            <Label text="Phone Number*" GridPane.rowIndex="2">
+               <textFill>
+                  <LinearGradient endX="1.0" endY="0.3459715639810427" startX="0.943127962085308" startY="0.6255924170616114">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.007662835249042145">
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <Label text="Street Address" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label text="City" GridPane.rowIndex="4" />
+            <Label text="State" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Label text="ZipCode" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label text="[Payment Type]" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets bottom="50.0" />
+               </GridPane.margin>
+            </Label>
+            <Button mnemonicParsing="false" prefWidth="93.0" text="Confirm" GridPane.columnIndex="2" GridPane.rowIndex="5">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <HBox maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" spacing="5.0" style="-fx-border-color: black;" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+               <children>
+                  <RadioButton mnemonicParsing="false" text="Cash">
+                     <HBox.margin>
+                        <Insets left="5.0" top="5.0" />
+                     </HBox.margin>
+                  </RadioButton>
+                  <RadioButton mnemonicParsing="false" text="Check">
+                     <HBox.margin>
+                        <Insets left="5.0" top="5.0" />
+                     </HBox.margin>
+                  </RadioButton>
+                  <RadioButton mnemonicParsing="false" text="Credit Card *dynamic*">
+                     <HBox.margin>
+                        <Insets left="5.0" top="5.0" />
+                     </HBox.margin>
+                  </RadioButton>
+               </children>
+            </HBox>
+            <Label text="*dynamic Credit Card number*" GridPane.columnIndex="1" GridPane.rowIndex="5" GridPane.valignment="TOP" />
+            <TextField alignment="CENTER" promptText="first name" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="20.0" right="20.0" top="50.0" />
+               </GridPane.margin>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="10.0" layoutY="203.0" promptText="last name" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="20.0" right="20.0" top="50.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField alignment="CENTER" promptText="###-###-####" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="20.0" right="20.0" top="50.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField alignment="CENTER" promptText="street address" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="20.0" right="20.0" top="50.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField alignment="CENTER" promptText="city" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="20.0" right="20.0" top="50.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField alignment="CENTER" promptText="state" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="20.0" right="20.0" top="50.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField alignment="CENTER" promptText="#####" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="20.0" right="20.0" top="50.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField alignment="CENTER" promptText="################ *dynamic*" GridPane.columnIndex="1" GridPane.rowIndex="5" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets left="20.0" right="20.0" top="20.0" />
+               </GridPane.margin>
+            </TextField>
+            <Line endX="550.0" startX="-500.0" strokeLineCap="ROUND" strokeMiterLimit="20.0" strokeWidth="2.0" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+            <Label text="*dynamic credit card security number*" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField alignment="CENTER" promptText="### *dynmaic*" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets left="20.0" right="20.0" top="50.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label text="Password*" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="0.3459715639810427" startX="0.943127962085308" startY="0.6255924170616114">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.007662835249042145">
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <TextField alignment="CENTER" promptText="password" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="20.0" right="20.0" top="50.0" />
+               </GridPane.margin>
+            </TextField>
+         </children>
+      </GridPane>
+   </children>
+</Pane>
