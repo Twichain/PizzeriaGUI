@@ -23,8 +23,6 @@ public class accountController{
     //attributes
     ArrayList<Customer> accounts= new ArrayList<>();
 
-
-
     @FXML
     private Button home;
     @FXML
@@ -93,6 +91,7 @@ public class accountController{
     protected void onHomeButtonClick(ActionEvent actionEvent){
         child.getChildren().clear();
         child.getChildren().addAll(loadFXML("homePage.fxml"));
+        accountSuccess.setVisible(false);
     }
     @FXML
     //credit card payment selected (also not selected(?))
@@ -117,6 +116,7 @@ public class accountController{
     protected void onConfirmButtonClick(ActionEvent actionEvent){
         if(accounts.isEmpty()&&!phoneNumberTextField.getText().equals("")&&!passwordTextField.getText().equals("")&&!firstNameTextField.getText().equals("")) {
             accounts.add(new Customer(phoneNumberTextField.getText(), passwordTextField.getText(), firstNameTextField.getText(), lastNameTextField.getText(), streetAddressTextField.getText(), stateTextField.getText(), cityTextField.getText(), zipCodeTextField.getText(), creditCardNumberTextField.getText(), creditCardSecurityNumberTextField.getText()));
+            accountSuccess.setVisible(true);
         }else if(!accounts.isEmpty()){
             accounts.get(0).setPhoneNumber(passwordTextField.getText());
             accounts.get(0).setPassword(passwordTextField.getText());
@@ -128,6 +128,7 @@ public class accountController{
             accounts.get(0).setZipCode(zipCodeTextField.getText());
             accounts.get(0).setCreditCardNumber(creditCardNumberTextField.getText());
             accounts.get(0).setCreditCardSecurityNumber(creditCardSecurityNumberTextField.getText());
+            accountSuccess.setVisible(true);
         }
 
     }
