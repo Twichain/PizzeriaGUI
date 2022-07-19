@@ -1,6 +1,8 @@
 package com.example.momandpopspizzeria.Controllers;
 
+
 import com.example.momandpopspizzeria.HelloApplication;
+import com.example.momandpopspizzeria.storage;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -14,7 +16,7 @@ import java.io.IOException;
 
 //this class stores the functionalities of the home page
 public class homePageController {
-    //attributes
+
     @FXML
     private Button account;
     @FXML
@@ -26,23 +28,24 @@ public class homePageController {
     @FXML
     private Label name;
     @FXML
-    private Label dynamicName;
+    private static Label dynamicName;
+    {dynamicText(dynamicName);}
     @FXML
     private Label pickupOrDelivery;
     @FXML
-    private Label dynamicPickup;
+    private static Label dynamicPickup;
     @FXML
     private Label subtotal;
     @FXML
-    private Label dynamicSubtotal;
+    private static Label dynamicSubtotal;
     @FXML
     private Label tax;
     @FXML
-    private Label dynamicTax;
+    private static Label dynamicTax;
     @FXML
     private Label total;
     @FXML
-    private Label dynamicTotal;
+    private static Label dynamicTotal;
     @FXML
     private Label summary;
     @FXML
@@ -82,4 +85,25 @@ public class homePageController {
         }
         return null;
     }
+    //attempt at dynamic first and last name w/ Label parameter
+    public void dynamicText(Label label){
+        if(!storage.getAccounts().isEmpty() && label!=null){
+            label.setText(storage.getAccounts().get(0).getFirstName());
+        }else if(label!=null){
+            label.setText("");
+        }
+    }
+    //some getters (shorthands) for specific labels
+    public static Label getLabel(String name){
+        Label label = null;
+        switch(name){
+            case "name" -> {label= dynamicName;}
+            case "pickup" ->{label= dynamicPickup;}
+            case "subTotal" ->{label= dynamicSubtotal;}
+            case "tax" ->{label= dynamicTax;}
+            case "total" ->{label= dynamicTotal;}
+        }
+        return label;
+    }
+
 }
