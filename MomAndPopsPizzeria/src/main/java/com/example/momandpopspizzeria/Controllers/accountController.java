@@ -2,6 +2,7 @@ package com.example.momandpopspizzeria.Controllers;
 
 import com.example.momandpopspizzeria.ClassObjects.Customer;
 import com.example.momandpopspizzeria.HelloApplication;
+import com.example.momandpopspizzeria.storage;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -16,12 +17,10 @@ import javafx.scene.shape.Line;
 
 
 import java.io.IOException;
-import java.util.ArrayList;
 
 //this class stores the functionalities for the account page
 public class accountController{
     //attributes
-    ArrayList<Customer> accounts= new ArrayList<>();
 
     @FXML
     private Button home;
@@ -88,10 +87,12 @@ public class accountController{
     //events
     @FXML
     //home button click
+    //still trying to set the home page's labels dynamically, failing
     protected void onHomeButtonClick(ActionEvent actionEvent){
+        accountSuccess.setVisible(false);
         child.getChildren().clear();
         child.getChildren().addAll(loadFXML("homePage.fxml"));
-        accountSuccess.setVisible(false);
+        homePageController.getLabel("name").setText(storage.getAccounts().get(0).getFirstName());
     }
     @FXML
     //credit card payment selected (also not selected(?))
@@ -114,23 +115,22 @@ public class accountController{
     @FXML
     //on confirm button click
     protected void onConfirmButtonClick(ActionEvent actionEvent){
-        if(accounts.isEmpty()&&!phoneNumberTextField.getText().equals("")&&!passwordTextField.getText().equals("")&&!firstNameTextField.getText().equals("")) {
-            accounts.add(new Customer(phoneNumberTextField.getText(), passwordTextField.getText(), firstNameTextField.getText(), lastNameTextField.getText(), streetAddressTextField.getText(), stateTextField.getText(), cityTextField.getText(), zipCodeTextField.getText(), creditCardNumberTextField.getText(), creditCardSecurityNumberTextField.getText()));
+        if(storage.getAccounts().isEmpty()&&!phoneNumberTextField.getText().equals("")&&!passwordTextField.getText().equals("")&&!firstNameTextField.getText().equals("")) {
+            storage.addCustomer(new Customer(phoneNumberTextField.getText(), passwordTextField.getText(), firstNameTextField.getText(), lastNameTextField.getText(), streetAddressTextField.getText(), stateTextField.getText(), cityTextField.getText(), zipCodeTextField.getText(), creditCardNumberTextField.getText(), creditCardSecurityNumberTextField.getText()));
             accountSuccess.setVisible(true);
-        }else if(!accounts.isEmpty()){
-            accounts.get(0).setPhoneNumber(passwordTextField.getText());
-            accounts.get(0).setPassword(passwordTextField.getText());
-            accounts.get(0).setFirstName(firstNameTextField.getText());
-            accounts.get(0).setLastName(lastNameTextField.getText());
-            accounts.get(0).setStreetAddress(streetAddressTextField.getText());
-            accounts.get(0).setState(stateTextField.getText());
-            accounts.get(0).setCity(cityTextField.getText());
-            accounts.get(0).setZipCode(zipCodeTextField.getText());
-            accounts.get(0).setCreditCardNumber(creditCardNumberTextField.getText());
-            accounts.get(0).setCreditCardSecurityNumber(creditCardSecurityNumberTextField.getText());
+        }else if(!storage.getAccounts().isEmpty()){
+            storage.getAccounts().get(0).setPhoneNumber(passwordTextField.getText());
+            storage.getAccounts().get(0).setPassword(passwordTextField.getText());
+            storage.getAccounts().get(0).setFirstName(firstNameTextField.getText());
+            storage.getAccounts().get(0).setLastName(lastNameTextField.getText());
+            storage.getAccounts().get(0).setStreetAddress(streetAddressTextField.getText());
+            storage.getAccounts().get(0).setState(stateTextField.getText());
+            storage.getAccounts().get(0).setCity(cityTextField.getText());
+            storage.getAccounts().get(0).setZipCode(zipCodeTextField.getText());
+            storage.getAccounts().get(0).setCreditCardNumber(creditCardNumberTextField.getText());
+            storage.getAccounts().get(0).setCreditCardSecurityNumber(creditCardSecurityNumberTextField.getText());
             accountSuccess.setVisible(true);
         }
-
     }
     @FXML
     //on radio button selection
@@ -160,4 +160,5 @@ public class accountController{
         }
         return null;
     }
+
 }
