@@ -58,7 +58,7 @@
                                       <graphic>
                                          <ImageView fitHeight="86.0" fitWidth="92.0" pickOnBounds="true" preserveRatio="true" />
                                       </graphic></Button>
-                                   <ListView fx:id="list" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowSpan="2147483647" />
+                                   <ListView fx:id="list" editable="true" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowSpan="2147483647" />
                                    <Label text="Extra Large">
                                       <GridPane.margin>
                                          <Insets bottom="100.0" />

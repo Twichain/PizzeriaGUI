@@ -8,10 +8,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.RadioButton;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.shape.Line;
@@ -27,12 +24,18 @@ public class accountController{
     private Stage stage;
     private Scene scene;
     private Parent root;
-    private static ArrayList<Customer> customers;
+    private String paymentType;
+    private String productRetrieval;
+    private ArrayList<Customer> customers;
 
     @FXML
     private Button home;
     @FXML
     private Label accountInformation;
+    @FXML
+    private RadioButton pickUp;
+    @FXML
+    private RadioButton delivery;
     @FXML
     private Line headerBorder;
     @FXML
@@ -67,8 +70,10 @@ public class accountController{
     private Label zipCode;
     @FXML
     private TextField zipCodeTextField;
+/*
     @FXML
     private Label paymentType;
+*/
     @FXML
     private HBox box;
     @FXML
@@ -93,6 +98,8 @@ public class accountController{
     private Label accountFailure;
     @FXML
     private Pane child;
+     @FXML
+    private ListView<String> list;
     //events
     @FXML
     //home button click
@@ -103,8 +110,12 @@ public class accountController{
         homePageController hpc = loader.getController();
         if(customers!=null){
             hpc.setLabel(customers.get(0).getFirstName());
+            hpc.setCustomers(customers);
         }else{
             hpc.setLabel("");
+        }
+        if(hpc.getListView()!=null){
+            hpc.setListView(list);
         }
 
         stage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
@@ -124,6 +135,7 @@ public class accountController{
             creditCardNumberTextField.setVisible(true);
             creditCardSecurityNumber.setVisible(true);
             creditCardSecurityNumberTextField.setVisible(true);
+            paymentType="Credit Card";
         }
         if(!creditCard.isSelected()){
             creditCardNumber.setVisible(false);
@@ -132,16 +144,26 @@ public class accountController{
             creditCardSecurityNumberTextField.setVisible(false);
         }
     }
+    //pick-up or delivery radio buttons selected
+    @FXML
+    protected void onProductRetrievalSelected(ActionEvent actionEvent){
+        if(pickUp.isSelected()){
+            delivery.setSelected(false);
+            productRetrieval="Pick-up";
+        }else if(delivery.isSelected()){
+            pickUp.setSelected(false);
+            productRetrieval="Delivery";
+        }
+    }
     @FXML
     //on confirm button click
     protected void onConfirmButtonClick(ActionEvent actionEvent){
-        if(customers ==null&&!phoneNumberTextField.getText().equals("")&&!passwordTextField.getText().equals("")&&!firstNameTextField.getText().equals("")) {
+        if(customers ==null&&!phoneNumberTextField.getText().equals("")&&!passwordTextField.getText().equals("")&&!firstNameTextField.getText().equals("")&&!paymentType.equals("")&&!productRetrieval.equals("")) {
             customers = new ArrayList<>();
-            customers.add(new Customer(phoneNumberTextField.getText(), passwordTextField.getText(), firstNameTextField.getText(), lastNameTextField.getText(), streetAddressTextField.getText(), stateTextField.getText(), cityTextField.getText(), zipCodeTextField.getText(), creditCardNumberTextField.getText(), creditCardSecurityNumberTextField.getText()));
+            customers.add(new Customer(phoneNumberTextField.getText(), passwordTextField.getText(), firstNameTextField.getText(), lastNameTextField.getText(), streetAddressTextField.getText(), stateTextField.getText(), cityTextField.getText(), zipCodeTextField.getText(), creditCardNumberTextField.getText(), creditCardSecurityNumberTextField.getText(),paymentType,productRetrieval));
             accountSuccess.setVisible(true);
-            System.out.println(customers.get(0).toString());
-        }else if(!phoneNumberTextField.getText().equals("")&&!passwordTextField.getText().equals("")&&!firstNameTextField.getText().equals("")){
-            customers.add(new Customer(phoneNumberTextField.getText(), passwordTextField.getText(), firstNameTextField.getText(), lastNameTextField.getText(), streetAddressTextField.getText(), stateTextField.getText(), cityTextField.getText(), zipCodeTextField.getText(), creditCardNumberTextField.getText(), creditCardSecurityNumberTextField.getText()));
+        }else if(!phoneNumberTextField.getText().equals("")&&!passwordTextField.getText().equals("")&&!firstNameTextField.getText().equals("")&&!paymentType.equals("")&&!productRetrieval.equals("")){
+            customers.add(new Customer(phoneNumberTextField.getText(), passwordTextField.getText(), firstNameTextField.getText(), lastNameTextField.getText(), streetAddressTextField.getText(), stateTextField.getText(), cityTextField.getText(), zipCodeTextField.getText(), creditCardNumberTextField.getText(), creditCardSecurityNumberTextField.getText(),paymentType,productRetrieval));
             accountSuccess.setVisible(true);
         }else{
             accountFailure.setVisible(true);
@@ -157,6 +179,7 @@ public class accountController{
             creditCardNumberTextField.setVisible(false);
             creditCardSecurityNumber.setVisible(false);
             creditCardSecurityNumberTextField.setVisible(false);
+            paymentType="Cash";
         }else if(check.isSelected()){
             cash.setSelected(false);
             creditCard.setSelected(false);
@@ -164,9 +187,26 @@ public class accountController{
             creditCardNumberTextField.setVisible(false);
             creditCardSecurityNumber.setVisible(false);
             creditCardSecurityNumberTextField.setVisible(false);
+            paymentType="Check";
         }
     }
     //algorithms
     //getter for arraylist
-    public static ArrayList<Customer> getCustomers(){return customers;}
+    public ArrayList<Customer> getCustomers(){return customers;}
+
+    //setter for listview
+    public void setListView(ListView<String> order){
+        if(list==null){
+            list = new ListView<>();
+        }else if(order!=null){
+            list.getItems().addAll(order.getItems());
+        }
+
+    }
+    //setCustomers
+    public void setCustomers(ArrayList<Customer> customersList){
+        if(customers==null) {
+            customers = customersList;
+        }
+    }
 }

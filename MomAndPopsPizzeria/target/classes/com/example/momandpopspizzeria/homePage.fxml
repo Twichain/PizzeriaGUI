@@ -27,17 +27,6 @@
             <Button fx:id="clear" mnemonicParsing="false" onAction="#onClearButtonClick" prefHeight="50.0" prefWidth="150.0" text="Clear" GridPane.rowIndex="3" />
             <Button fx:id="confirm" mnemonicParsing="false" onAction="#onConfirmButtonClick" prefHeight="50.0" prefWidth="150.0" text="Confirm" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
             <Label fx:id="summary" text="SUMMARY" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" />
-            <Label fx:id="total" text="ToTal : " GridPane.columnIndex="2" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
-               <GridPane.margin>
-                  <Insets bottom="30.0" />
-               </GridPane.margin>
-            </Label>
-            <Label fx:id="tax" text="Tax :" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-            <Label fx:id="subtotal" text="SubToTal :" GridPane.columnIndex="2" GridPane.rowIndex="2" GridPane.valignment="TOP">
-               <GridPane.margin>
-                  <Insets bottom="5.0" top="30.0" />
-               </GridPane.margin>
-            </Label>
             <Label fx:id="name" text="Name" GridPane.rowIndex="2" GridPane.valignment="TOP" />
             <Label fx:id="dynamicName" GridPane.rowIndex="2" GridPane.valignment="TOP">
                <GridPane.margin>
@@ -50,22 +39,7 @@
                   <Insets top="50.0" />
                </GridPane.margin>
             </Label>
-            <ListView fx:id="orderSummary" editable="true" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: lightgrey;" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <Label fx:id="dynamicTax" text="*dynamic*" GridPane.columnIndex="2" GridPane.rowIndex="2">
-               <GridPane.margin>
-                  <Insets left="70.0" />
-               </GridPane.margin>
-            </Label>
-            <Label fx:id="dynamicSubtotal" text="*dynamic*" GridPane.columnIndex="2" GridPane.rowIndex="2" GridPane.valignment="TOP">
-               <GridPane.margin>
-                  <Insets left="70.0" top="30.0" />
-               </GridPane.margin>
-            </Label>
-            <Label fx:id="dynamicTotal" text="*dynamic*" GridPane.columnIndex="2" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
-               <GridPane.margin>
-                  <Insets bottom="30.0" left="70.0" />
-               </GridPane.margin>
-            </Label>
+            <ListView fx:id="orderSummary" editable="true" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: lightgrey;" GridPane.columnIndex="2" GridPane.rowIndex="1" GridPane.rowSpan="2" />
             <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                <image>
                   <Image url="@/pizzaSymbol.png" />

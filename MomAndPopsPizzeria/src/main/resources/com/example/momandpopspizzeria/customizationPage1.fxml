@@ -5,7 +5,7 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.momandpopspizzeria.Controllers.customization1Controller" >
+<Pane xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.momandpopspizzeria.Controllers.customization1Controller">
    <children>
       <GridPane layoutY="2.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="720.0" prefWidth="1052.0">
          <columnConstraints>
@@ -57,7 +57,7 @@
                                        </graphic>
                                     </Button>
                                     <Label text="SUMMARY" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="TOP" />
-                                    <ListView fx:id="list" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowSpan="2147483647">
+                                    <ListView fx:id="list" editable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowSpan="2147483647">
                                        <GridPane.margin>
                                           <Insets top="20.0" />
                                        </GridPane.margin>

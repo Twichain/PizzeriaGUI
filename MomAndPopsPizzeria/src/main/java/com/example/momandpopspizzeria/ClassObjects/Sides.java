@@ -6,7 +6,7 @@ public class Sides {
     double price;
 
     //constructor
-    Sides(String side, double price){
+    public Sides(String side, double price){
         this.side = side;
         this.price = price;
     }

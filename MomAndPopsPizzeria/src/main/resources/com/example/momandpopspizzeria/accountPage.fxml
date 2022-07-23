@@ -97,7 +97,7 @@
                   <Insets bottom="50.0" />
                </GridPane.margin>
             </Label>
-            <Button fx:id="confirm" mnemonicParsing="false" onAction="#onConfirmButtonClick" prefWidth="93.0" text="Confirm" GridPane.columnIndex="2" GridPane.rowIndex="5">
+            <Button fx:id="confirm" mnemonicParsing="false" onAction="#onConfirmButtonClick" text="Confirm" GridPane.columnIndex="2" GridPane.rowIndex="5">
                <font>
                   <Font size="18.0" />
                </font>
@@ -214,6 +214,29 @@
                <GridPane.margin>
                   <Insets top="30.0" />
                </GridPane.margin></Label>
+            <ListView fx:id="list" prefHeight="200.0" prefWidth="200.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label text="[Pick-up / Delivery]" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets bottom="50.0" />
+               </GridPane.margin>
+            </Label>
+            <HBox maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" spacing="5.0" style="-fx-border-color: black;" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <children>
+                  <RadioButton fx:id="pickUp" mnemonicParsing="false" onAction="#onProductRetrievalSelected" text="Pick-up">
+                     <HBox.margin>
+                        <Insets left="40.0" top="5.0" />
+                     </HBox.margin>
+                  </RadioButton>
+                  <RadioButton fx:id="delivery" mnemonicParsing="false" onAction="#onProductRetrievalSelected" text="Delivery">
+                     <HBox.margin>
+                        <Insets left="40.0" top="5.0" />
+                     </HBox.margin>
+                  </RadioButton>
+               </children>
+               <GridPane.margin>
+                  <Insets left="5.0" right="5.0" />
+               </GridPane.margin>
+            </HBox>
          </children>
       </GridPane>
    </children>

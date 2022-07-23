@@ -1,5 +1,6 @@
 package com.example.momandpopspizzeria.Controllers;
 
+import com.example.momandpopspizzeria.ClassObjects.Customer;
 import com.example.momandpopspizzeria.HelloApplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -15,6 +16,7 @@ import javafx.stage.Stage;
 import org.controlsfx.control.action.Action;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 //this class is going to store all the functionality of the base ordering system
 public class orderMenuController {
@@ -22,6 +24,7 @@ public class orderMenuController {
     private Stage stage;
     private Scene scene;
     private Parent root;
+    private ArrayList<Customer> customers;
 
     @FXML
     private Button home;
@@ -50,7 +53,9 @@ public class orderMenuController {
         if(order!=null){
             c1c.setListView(order);
         }
-
+        if(customers!=null){
+            c1c.setCustomers(customers);
+        }
         stage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
         scene = new Scene(root);
         scene.getStylesheets().add("style.css");
@@ -63,6 +68,13 @@ public class orderMenuController {
     protected void onSidesButtonClick(ActionEvent actionEvent) throws IOException{
         FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("customizationPage3.fxml"));
         root = loader.load();
+        customization3Controller c3c = loader.getController();
+        if(order!=null){
+            c3c.setListView(order);
+        }
+        if(customers!=null){
+            c3c.setCustomers(customers);
+        }
         stage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
         scene = new Scene(root);
         scene.getStylesheets().add("style.css");
@@ -78,6 +90,9 @@ public class orderMenuController {
         customization2Controller c2c = loader.getController();
         if(order!=null){
             c2c.setListView(order);
+        }
+        if(customers!=null){
+            c2c.setCustomers(customers);
         }
         stage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -99,6 +114,10 @@ public class orderMenuController {
         if(order!=null){
             hpc.setListView(order);
         }
+        if(customers!=null){
+            hpc.setLabel(customers.get(0).getFirstName());
+            hpc.setCustomers(customers);
+        }
         stage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
         scene = new Scene(root);
         scene.getStylesheets().add("style.css");
@@ -118,6 +137,12 @@ public class orderMenuController {
             order = new ListView<>();
         }else{
             order.getItems().addAll(list.getItems());
+        }
+    }
+    //setCustomers
+    public void setCustomers(ArrayList<Customer> customersList){
+        if(customers==null) {
+            customers = customersList;
         }
     }
 }

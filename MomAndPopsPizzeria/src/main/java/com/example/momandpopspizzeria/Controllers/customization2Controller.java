@@ -1,6 +1,7 @@
 package com.example.momandpopspizzeria.Controllers;
 
 import com.example.momandpopspizzeria.ClassObjects.Beverages;
+import com.example.momandpopspizzeria.ClassObjects.Customer;
 import com.example.momandpopspizzeria.ClassObjects.Sizes;
 import com.example.momandpopspizzeria.HelloApplication;
 import javafx.event.ActionEvent;
@@ -23,6 +24,8 @@ public class customization2Controller {
     private Stage stage;
     private Scene scene;
     private Parent root;
+    private ArrayList<Customer> customers;
+
     private static ArrayList<Sizes> sizes = new ArrayList<>(List.of(new Sizes("Extra Large",1),new Sizes("Large",1),new Sizes("Medium",1),new Sizes("Small",1),new Sizes("Kids",1)));
     private static ArrayList<Beverages> beverages = new ArrayList<>(List.of(
             new Beverages(" -Pepsi"),new Beverages(" -Diet Pepsi"),new Beverages(" -Sunkist"),new Beverages(" -Diet Sunkist"),
@@ -243,6 +246,9 @@ public class customization2Controller {
         if(list!=null){
             omc.setListView(list);
         }
+        if(customers!=null){
+            omc.setCustomers(customers);
+        }
         stage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
         scene = new Scene(root);
         scene.getStylesheets().add("style.css");
@@ -258,6 +264,11 @@ public class customization2Controller {
         }else if(order!=null){
             list.getItems().addAll(order.getItems());
         }
-
+    }
+    //setCustomers
+    public void setCustomers(ArrayList<Customer> customersList){
+        if(customers==null) {
+            customers = customersList;
+        }
     }
 }
