@@ -1,8 +1,9 @@
 package com.example.momandpopspizzeria.Controllers;
 
 
+import com.example.momandpopspizzeria.ClassObjects.Customer;
 import com.example.momandpopspizzeria.HelloApplication;
-import com.example.momandpopspizzeria.storage;
+//import com.example.momandpopspizzeria.storage;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,9 +14,11 @@ import javafx.scene.control.ListView;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import java.io.IOException;
+import java.util.ArrayList;
 
 //this class stores the functionalities of the home page
 public class homePageController {
+
 
     @FXML
     private Button account;
@@ -28,30 +31,29 @@ public class homePageController {
     @FXML
     private Label name;
     @FXML
-    private static Label dynamicName;
-    {dynamicText(dynamicName);}
+    private Label dynamicName;
     @FXML
     private Label pickupOrDelivery;
     @FXML
-    private static Label dynamicPickup;
+    private Label dynamicPickup;
     @FXML
     private Label subtotal;
     @FXML
-    private static Label dynamicSubtotal;
+    private Label dynamicSubtotal;
     @FXML
     private Label tax;
     @FXML
-    private static Label dynamicTax;
+    private Label dynamicTax;
     @FXML
     private Label total;
     @FXML
-    private static Label dynamicTotal;
+    private Label dynamicTotal;
     @FXML
     private Label summary;
     @FXML
     private ImageView icon;
     @FXML
-    private ListView<String> orderSummary = new ListView<>();
+    private ListView<String> orderSummary;
     @FXML
     private Pane child;
 
@@ -85,16 +87,9 @@ public class homePageController {
         }
         return null;
     }
-    //attempt at dynamic first and last name w/ Label parameter
-    public void dynamicText(Label label){
-        if(!storage.getAccounts().isEmpty() && label!=null){
-            label.setText(storage.getAccounts().get(0).getFirstName());
-        }else if(label!=null){
-            label.setText("");
-        }
-    }
+
     //some getters (shorthands) for specific labels
-    public static Label getLabel(String name){
+    public Label getLabel(String name){
         Label label = null;
         switch(name){
             case "name" -> {label= dynamicName;}
@@ -105,5 +100,26 @@ public class homePageController {
         }
         return label;
     }
+    public FXMLLoader getController(String name){
+        return new FXMLLoader(getClass().getResource(name));
+    }
 
+    //setters for private labels
+    public void setLabel(String name){
+        if(dynamicName==null){
+            dynamicName=new Label();
+        }
+        if(name!=null){
+            dynamicName.setText(name);
+        }
+    }
+    //setListView items method for other controllers
+    public void setListView(ListView<String> order){
+        if(orderSummary==null){
+            orderSummary = new ListView<>();
+        }else if(order!=null){
+            orderSummary.getItems().addAll(order.getItems());
+        }
+
+    }
 }

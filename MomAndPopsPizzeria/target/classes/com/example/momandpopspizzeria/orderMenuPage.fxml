@@ -6,10 +6,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-
-<Pane xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1">
+<Pane fx:id="child" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.momandpopspizzeria.Controllers.orderMenuController">
    <children>
-      <GridPane fx:id="child" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1052.0">
+      <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1052.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="873.0" minWidth="10.0" prefWidth="797.0" />
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="585.0" minWidth="10.0" prefWidth="255.0" />
@@ -26,7 +25,7 @@
          <children>
             <HBox alignment="CENTER" style="-fx-border-color: black;" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
-                  <Button alignment="CENTER" mnemonicParsing="false">
+                  <Button fx:id="home" alignment="CENTER" mnemonicParsing="false" onAction="#onHomeButtonClick">
                      <graphic>
                         <ImageView fitHeight="39.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true" />
                      </graphic>
@@ -34,7 +33,7 @@
                         <Insets left="-50.0" right="200.0" />
                      </HBox.margin>
                   </Button>
-                  <Label alignment="BASELINE_CENTER" contentDisplay="CENTER" text="Menu">
+                  <Label fx:id="menu" alignment="BASELINE_CENTER" contentDisplay="CENTER" text="Menu">
                      <font>
                         <Font size="48.0" />
                      </font>
@@ -47,17 +46,17 @@
                   <Insets bottom="8.0" />
                </GridPane.margin>
             </HBox>
-            <Button alignment="CENTER" mnemonicParsing="false" prefHeight="33.0" prefWidth="138.0" text="Pizzas" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+            <Button fx:id="pizzas" alignment="CENTER" mnemonicParsing="false" onAction="#onPizzasButtonClick" prefHeight="33.0" prefWidth="138.0" text="Pizzas" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
                <GridPane.margin>
                   <Insets top="5.0" />
                </GridPane.margin>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="137.0" text="Sides" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
+            <Button fx:id="sides" mnemonicParsing="false" onAction="#onSidesButtonClick" prefHeight="32.0" prefWidth="137.0" text="Sides" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
                <GridPane.margin>
                   <Insets top="5.0" />
                </GridPane.margin>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="28.0" prefWidth="153.0" text="Drinks" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="TOP">
+            <Button fx:id="drinks" mnemonicParsing="false" onAction="#onDrinksButtonClick" prefHeight="28.0" prefWidth="153.0" text="Drinks" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="TOP">
                <GridPane.margin>
                   <Insets top="5.0" />
                </GridPane.margin>
@@ -71,8 +70,8 @@
             <ImageView fitHeight="47.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3" GridPane.valignment="BOTTOM" />
             <ImageView fitHeight="49.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="BOTTOM" />
             <ImageView fitHeight="50.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="BOTTOM" />
-            <ListView editable="true" prefHeight="586.0" prefWidth="255.0" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.rowSpan="2147483647" />
-            <Button mnemonicParsing="false" text="Submit" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+            <ListView fx:id="order" editable="true" prefHeight="586.0" prefWidth="255.0" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.rowSpan="2147483647" />
+            <Button fx:id="submit" mnemonicParsing="false" onAction="#onClearButtonClick" text="Clear" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
                <GridPane.margin>
                   <Insets bottom="2.0" />
                </GridPane.margin>

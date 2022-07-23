@@ -1,6 +1,7 @@
 package com.example.momandpopspizzeria.ClassObjects;
-
+//this class holds the constructor for the customer accounts.
 public class Customer {
+    //attributes
     private String phoneNumber;
     private String password;
     private String firstName;
@@ -25,6 +26,7 @@ public class Customer {
         this.creditCardSecurityNumber=creditCardSecurityNumber;
 
     }
+
     //getters
     public String getPhoneNumber(){return phoneNumber;}
     public String getPassword(){return password;}
@@ -37,6 +39,7 @@ public class Customer {
     public String getCreditCardNumber(){return creditCardNumber;}
     public String getCreditCardSecurityNumber() {return creditCardSecurityNumber;}
     //setters
+
     public void setPhoneNumber(String input){this.phoneNumber=input;}
     public void setPassword(String input){this.password=input;}
     public void setFirstName(String input){this.firstName=input;}
@@ -47,8 +50,8 @@ public class Customer {
     public void setZipCode(String input){this.zipCode=input;}
     public void setCreditCardNumber(String input){this.creditCardNumber=input;}
     public void setCreditCardSecurityNumber(String input){this.creditCardSecurityNumber=input;}
-    //extra methods
 
+    //extra methods
     @Override
     public String toString() {
         return "Customer{" +

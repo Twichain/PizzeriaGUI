@@ -5,371 +5,386 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<GridPane xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1">
-   <columnConstraints>
-      <ColumnConstraints hgrow="SOMETIMES" maxWidth="800.0" minWidth="10.0" prefWidth="800.0" />
-      <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="0.0" prefWidth="0.0" />
-      <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="0.0" prefWidth="0.0" />
-   </columnConstraints>
-   <rowConstraints>
-      <RowConstraints maxHeight="550.0" minHeight="10.0" prefHeight="550.0" vgrow="SOMETIMES" />
-      <RowConstraints maxHeight="150.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
-      <RowConstraints maxHeight="120.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
-      <RowConstraints maxHeight="90.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
-      <RowConstraints maxHeight="60.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
-      <RowConstraints maxHeight="25.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
-   </rowConstraints>
+<Pane xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.momandpopspizzeria.Controllers.customization1Controller" >
    <children>
-      <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="555.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE">
-        <tabs>
-          <Tab text="Pizza Size">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <GridPane layoutY="8.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="515.0" prefWidth="800.0">
-                          <columnConstraints>
-                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                          </columnConstraints>
-                          <rowConstraints>
-                            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
-                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                          </rowConstraints>
+      <GridPane layoutY="2.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="720.0" prefWidth="1052.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1052.0" minWidth="10.0" prefWidth="1052.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="252.0" minWidth="0.0" prefWidth="0.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="0.0" prefWidth="0.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="717.0" minHeight="10.0" prefHeight="717.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <TabPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1053.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab fx:id="pizzaSizes" onSelectionChanged="#onTab1Switch" text="Pizza Size">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
-                              <Button mnemonicParsing="false">
-                                 <graphic>
-                                    <ImageView fitHeight="59.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true" />
-                                 </graphic>
-                              </Button>
-                              <Button mnemonicParsing="false" GridPane.columnIndex="1">
-                                 <graphic>
-                                    <ImageView fitHeight="62.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true" />
-                                 </graphic>
-                              </Button>
-                              <Button mnemonicParsing="false" GridPane.columnIndex="2">
-                                 <graphic>
-                                    <ImageView fitHeight="58.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true" />
-                                 </graphic>
-                              </Button>
-                              <Button mnemonicParsing="false" GridPane.rowIndex="1">
-                                 <graphic>
-                                    <ImageView fitHeight="62.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true" />
-                                 </graphic>
-                              </Button>
-                              <Label text="SUMMARY" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="TOP" />
-                              <ListView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowSpan="2147483647">
-                                 <GridPane.margin>
-                                    <Insets top="20.0" />
-                                 </GridPane.margin>
-                              </ListView>
-                              <Button mnemonicParsing="false" text="Add" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
-                                 <GridPane.margin>
-                                    <Insets bottom="2.0" right="2.0" />
-                                 </GridPane.margin>
-                              </Button>
-                              <Button mnemonicParsing="false" prefHeight="58.0" prefWidth="67.0" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
-                                 <graphic>
-                                    <ImageView fitHeight="62.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true" />
-                                 </graphic>
-                                 <GridPane.margin>
-                                    <Insets bottom="2.0" right="2.0" />
-                                 </GridPane.margin>
-                              </Button>
-                              <Label alignment="CENTER" text="*size 1*">
-                                 <GridPane.margin>
-                                    <Insets bottom="100.0" />
-                                 </GridPane.margin>
-                              </Label>
-                              <Label text="*size 2*" GridPane.columnIndex="1">
-                                 <GridPane.margin>
-                                    <Insets bottom="100.0" />
-                                 </GridPane.margin>
-                              </Label>
-                              <Label text="*size 3*" GridPane.columnIndex="2">
-                                 <GridPane.margin>
-                                    <Insets bottom="100.0" />
-                                 </GridPane.margin>
-                              </Label>
-                              <Label text="*size 4*" GridPane.rowIndex="1">
-                                 <GridPane.margin>
-                                    <Insets bottom="100.0" />
-                                 </GridPane.margin>
-                              </Label>
-                              <Label text="*dynamic price*">
-                                 <GridPane.margin>
-                                    <Insets top="100.0" />
-                                 </GridPane.margin>
-                              </Label>
-                              <Label text="*dynamic price*" GridPane.columnIndex="1">
-                                 <GridPane.margin>
-                                    <Insets top="100.0" />
-                                 </GridPane.margin>
-                              </Label>
-                              <Label text="*dynamic price*" GridPane.columnIndex="2">
-                                 <GridPane.margin>
-                                    <Insets top="100.0" />
-                                 </GridPane.margin>
-                              </Label>
-                              <Label text="*dynamic price*" GridPane.rowIndex="1">
-                                 <GridPane.margin>
-                                    <Insets top="100.0" />
-                                 </GridPane.margin>
-                              </Label>
+                              <GridPane layoutY="8.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="684.0" prefWidth="1052.0">
+                                <columnConstraints>
+                                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Button fx:id="extraLarge" mnemonicParsing="false" onAction="#onExtraLargePress">
+                                       <graphic>
+                                          <ImageView fitHeight="59.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true" />
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="large" mnemonicParsing="false" onAction="#onLargePress" GridPane.columnIndex="1">
+                                       <graphic>
+                                          <ImageView fitHeight="62.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true" />
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="medium" mnemonicParsing="false" onAction="#onMediumPress" GridPane.columnIndex="2">
+                                       <graphic>
+                                          <ImageView fitHeight="58.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true" />
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="small" mnemonicParsing="false" onAction="#onSmallPress" GridPane.rowIndex="1">
+                                       <graphic>
+                                          <ImageView fitHeight="62.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true" />
+                                       </graphic>
+                                    </Button>
+                                    <Label text="SUMMARY" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="TOP" />
+                                    <ListView fx:id="list" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowSpan="2147483647">
+                                       <GridPane.margin>
+                                          <Insets top="20.0" />
+                                       </GridPane.margin>
+                                    </ListView>
+                                    <Button fx:id="home" mnemonicParsing="false" onAction="#onHomePress" prefHeight="58.0" prefWidth="67.0" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+                                       <graphic>
+                                          <ImageView fitHeight="62.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true" />
+                                       </graphic>
+                                       <GridPane.margin>
+                                          <Insets bottom="2.0" right="2.0" />
+                                       </GridPane.margin>
+                                    </Button>
+                                    <Label alignment="CENTER" text="Extra Large">
+                                       <GridPane.margin>
+                                          <Insets bottom="100.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label text="Large" GridPane.columnIndex="1">
+                                       <GridPane.margin>
+                                          <Insets bottom="100.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label text="Medium" GridPane.columnIndex="2">
+                                       <GridPane.margin>
+                                          <Insets bottom="100.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label text="Small" GridPane.rowIndex="1">
+                                       <GridPane.margin>
+                                          <Insets bottom="100.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label text="+ $10">
+                                       <GridPane.margin>
+                                          <Insets top="100.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label text="+ $8" GridPane.columnIndex="1">
+                                       <GridPane.margin>
+                                          <Insets top="100.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label text="+ $6" GridPane.columnIndex="2">
+                                       <GridPane.margin>
+                                          <Insets top="100.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label text="+ $4" GridPane.rowIndex="1">
+                                       <GridPane.margin>
+                                          <Insets top="100.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label text="Pick a Size" GridPane.columnSpan="3" GridPane.valignment="TOP" />
+                                 </children>
+                              </GridPane>
                            </children>
-                        </GridPane>
-                     </children>
-                  </AnchorPane>
-            </content>
-          </Tab>
-          <Tab text="Pizza Crust">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <GridPane layoutY="1.0" prefHeight="371.0" prefWidth="600.0">
-                          <columnConstraints>
-                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                          </columnConstraints>
-                          <rowConstraints>
-                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                          </rowConstraints>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab fx:id="pizzaCrust" onSelectionChanged="#onTab2Switch" text="Pizza Crust">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
-                              <Button mnemonicParsing="false">
-                                 <graphic>
-                                    <ImageView fitHeight="67.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true" />
-                                 </graphic>
-                              </Button>
-                              <Button mnemonicParsing="false" GridPane.columnIndex="1">
-                                 <graphic>
-                                    <ImageView fitHeight="62.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
-                                 </graphic>
-                              </Button>
-                              <Button mnemonicParsing="false" GridPane.columnIndex="2">
-                                 <graphic>
-                                    <ImageView fitHeight="47.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
-                                 </graphic>
-                              </Button>
-                              <Label text="SUMMARY" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="TOP" />
-                              <ListView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowSpan="2147483647">
-                                 <GridPane.margin>
-                                    <Insets top="20.0" />
-                                 </GridPane.margin>
-                              </ListView>
-                              <Button mnemonicParsing="false" text="Add" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
-                                 <GridPane.margin>
-                                    <Insets bottom="2.0" right="2.0" />
-                                 </GridPane.margin>
-                              </Button>
-                              <Button mnemonicParsing="false" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
-                                 <graphic>
-                                    <ImageView fitHeight="60.0" fitWidth="78.0" pickOnBounds="true" preserveRatio="true" />
-                                 </graphic>
-                                 <GridPane.margin>
-                                    <Insets bottom="2.0" right="2.0" />
-                                 </GridPane.margin>
-                              </Button>
-                              <Label text="*dynamic price*">
-                                 <GridPane.margin>
-                                    <Insets top="100.0" />
-                                 </GridPane.margin>
-                              </Label>
-                              <Label text="*dynamic price*" GridPane.columnIndex="1">
-                                 <GridPane.margin>
-                                    <Insets top="100.0" />
-                                 </GridPane.margin>
-                              </Label>
-                              <Label text="*dynamic price*" GridPane.columnIndex="2">
-                                 <GridPane.margin>
-                                    <Insets top="100.0" />
-                                 </GridPane.margin>
-                              </Label>
-                              <Label text="*crust1*">
-                                 <GridPane.margin>
-                                    <Insets bottom="100.0" />
-                                 </GridPane.margin>
-                              </Label>
-                              <Label text="*crust2*" GridPane.columnIndex="1">
-                                 <GridPane.margin>
-                                    <Insets bottom="100.0" />
-                                 </GridPane.margin>
-                              </Label>
-                              <Label text="*crust3*" GridPane.columnIndex="2">
-                                 <GridPane.margin>
-                                    <Insets bottom="100.0" />
-                                 </GridPane.margin>
-                              </Label>
+                              <GridPane layoutY="1.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="691.0" prefWidth="1052.0">
+                                <columnConstraints>
+                                    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Button fx:id="thinCrust" mnemonicParsing="false" onAction="#onThinCrustPress">
+                                       <graphic>
+                                          <ImageView fitHeight="67.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true" />
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="regularCrust" mnemonicParsing="false" onAction="#onRegularCrustPress" GridPane.columnIndex="1">
+                                       <graphic>
+                                          <ImageView fitHeight="62.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="panCrust" mnemonicParsing="false" onAction="#onPanCrustPress" GridPane.columnIndex="2">
+                                       <graphic>
+                                          <ImageView fitHeight="47.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+                                       </graphic>
+                                    </Button>
+                                    <Label text="SUMMARY" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="TOP" />
+                                    <ListView fx:id="list2" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowSpan="2147483647">
+                                       <GridPane.margin>
+                                          <Insets top="20.0" />
+                                       </GridPane.margin>
+                                    </ListView>
+                                    <Button fx:id="home2" mnemonicParsing="false" onAction="#onHomePress" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+                                       <graphic>
+                                          <ImageView fitHeight="60.0" fitWidth="78.0" pickOnBounds="true" preserveRatio="true" />
+                                       </graphic>
+                                       <GridPane.margin>
+                                          <Insets bottom="2.0" right="2.0" />
+                                       </GridPane.margin>
+                                    </Button>
+                                    <Label text="+ $1">
+                                       <GridPane.margin>
+                                          <Insets top="100.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label text="+ $0" GridPane.columnIndex="1">
+                                       <GridPane.margin>
+                                          <Insets top="100.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label text="+ $2" GridPane.columnIndex="2">
+                                       <GridPane.margin>
+                                          <Insets top="100.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label text="Thin Crust">
+                                       <GridPane.margin>
+                                          <Insets bottom="100.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label text="Regular Crust" GridPane.columnIndex="1">
+                                       <GridPane.margin>
+                                          <Insets bottom="100.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label text="Pan Crust" GridPane.columnIndex="2">
+                                       <GridPane.margin>
+                                          <Insets bottom="100.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label text="Pick a Crust" GridPane.columnSpan="3" GridPane.valignment="TOP">
+                                       <GridPane.margin>
+                                          <Insets top="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                 </children>
+                              </GridPane>
                            </children>
-                        </GridPane>
-                     </children>
-                  </AnchorPane>
-            </content>
-          </Tab>
-          <Tab text="Pizza Toppings">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <GridPane layoutX="-2.0" layoutY="-1.0" prefHeight="370.0" prefWidth="600.0">
-                          <columnConstraints>
-                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                          </columnConstraints>
-                          <rowConstraints>
-                            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
-                            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
-                            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
-                          </rowConstraints>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab fx:id="pizzaToppings" onSelectionChanged="#onTab3Switch" text="Pizza Toppings">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
-                              <Button mnemonicParsing="false">
-                                 <graphic>
-                                    <ImageView fitHeight="70.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true" />
-                                 </graphic>
-                              </Button>
-                              <Button mnemonicParsing="false" GridPane.columnIndex="1">
-                                 <graphic>
-                                    <ImageView fitHeight="60.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true" />
-                                 </graphic>
-                              </Button>
-                              <Button mnemonicParsing="false" GridPane.columnIndex="2">
-                                 <graphic>
-                                    <ImageView fitHeight="63.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true" />
-                                 </graphic>
-                              </Button>
-                              <Button mnemonicParsing="false" GridPane.rowIndex="1">
-                                 <graphic>
-                                    <ImageView fitHeight="77.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true" />
-                                 </graphic>
-                              </Button>
-                              <Button mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                                 <graphic>
-                                    <ImageView fitHeight="65.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true" />
-                                 </graphic>
-                              </Button>
-                              <Button mnemonicParsing="false" GridPane.columnIndex="2" GridPane.rowIndex="1">
-                                 <graphic>
-                                    <ImageView fitHeight="69.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true" />
-                                 </graphic>
-                              </Button>
-                              <Button mnemonicParsing="false" GridPane.rowIndex="2">
-                                 <graphic>
-                                    <ImageView fitHeight="58.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true" />
-                                 </graphic>
-                              </Button>
-                              <Button mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="2">
-                                 <graphic>
-                                    <ImageView fitHeight="61.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
-                                 </graphic>
-                              </Button>
-                              <Label text="SUMMARY" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="TOP" />
-                              <ListView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowSpan="2147483647">
-                                 <GridPane.margin>
-                                    <Insets top="20.0" />
-                                 </GridPane.margin>
-                              </ListView>
-                              <Button mnemonicParsing="false" text="Add" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" />
-                              <Button mnemonicParsing="false" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
-                                 <GridPane.margin>
-                                    <Insets right="2.0" />
-                                 </GridPane.margin>
-                                 <graphic>
-                                    <ImageView fitHeight="52.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true" />
-                                 </graphic>
-                              </Button>
-                              <Label text="*topping1*">
-                                 <GridPane.margin>
-                                    <Insets bottom="100.0" />
-                                 </GridPane.margin>
-                              </Label>
-                              <Label text="*dynamic price*">
-                                 <GridPane.margin>
-                                    <Insets top="100.0" />
-                                 </GridPane.margin>
-                              </Label>
-                              <Label text="*topping2*" GridPane.columnIndex="1">
-                                 <GridPane.margin>
-                                    <Insets bottom="100.0" />
-                                 </GridPane.margin>
-                              </Label>
-                              <Label text="*dynamic price*" GridPane.columnIndex="1">
-                                 <GridPane.margin>
-                                    <Insets top="100.0" />
-                                 </GridPane.margin>
-                              </Label>
-                              <Label text="*topping3*" GridPane.columnIndex="2">
-                                 <GridPane.margin>
-                                    <Insets bottom="100.0" />
-                                 </GridPane.margin>
-                              </Label>
-                              <Label text="*dynamic price*" GridPane.columnIndex="2">
-                                 <GridPane.margin>
-                                    <Insets top="100.0" />
-                                 </GridPane.margin>
-                              </Label>
-                              <Label text="*topping4*" GridPane.rowIndex="1">
-                                 <GridPane.margin>
-                                    <Insets bottom="100.0" />
-                                 </GridPane.margin>
-                              </Label>
-                              <Label text="*dynamic price*" GridPane.rowIndex="1">
-                                 <GridPane.margin>
-                                    <Insets top="100.0" />
-                                 </GridPane.margin>
-                              </Label>
-                              <Label text="*topping5*" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                                 <GridPane.margin>
-                                    <Insets bottom="100.0" />
-                                 </GridPane.margin>
-                              </Label>
-                              <Label text="*dynamic price*" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                                 <GridPane.margin>
-                                    <Insets top="100.0" />
-                                 </GridPane.margin>
-                              </Label>
-                              <Label text="*topping6*" GridPane.columnIndex="2" GridPane.rowIndex="1">
-                                 <GridPane.margin>
-                                    <Insets bottom="100.0" />
-                                 </GridPane.margin>
-                              </Label>
-                              <Label text="*dynamic price*" GridPane.columnIndex="2" GridPane.rowIndex="1">
-                                 <GridPane.margin>
-                                    <Insets top="100.0" />
-                                 </GridPane.margin>
-                              </Label>
-                              <Label text="*topping7*" GridPane.rowIndex="2">
-                                 <GridPane.margin>
-                                    <Insets bottom="90.0" />
-                                 </GridPane.margin>
-                              </Label>
-                              <Label text="*dynamic price*" GridPane.rowIndex="2">
-                                 <GridPane.margin>
-                                    <Insets top="90.0" />
-                                 </GridPane.margin>
-                              </Label>
-                              <Label text="*topping8*" GridPane.columnIndex="1" GridPane.rowIndex="2">
-                                 <GridPane.margin>
-                                    <Insets bottom="90.0" />
-                                 </GridPane.margin>
-                              </Label>
-                              <Label text="*dynamic price*" GridPane.columnIndex="1" GridPane.rowIndex="2">
-                                 <GridPane.margin>
-                                    <Insets top="90.0" />
-                                 </GridPane.margin>
-                              </Label>
+                              <GridPane layoutX="1.0" layoutY="-2.0" prefHeight="693.0" prefWidth="1052.0">
+                                <columnConstraints>
+                                    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Button fx:id="cheese" mnemonicParsing="false" onAction="#onCheesePress">
+                                       <graphic>
+                                          <ImageView fitHeight="70.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true" />
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="pepperoni" mnemonicParsing="false" onAction="#onPepperoniPress" GridPane.columnIndex="1">
+                                       <graphic>
+                                          <ImageView fitHeight="60.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true" />
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="sausage" mnemonicParsing="false" onAction="#onSausagePress" GridPane.columnIndex="2">
+                                       <graphic>
+                                          <ImageView fitHeight="63.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true" />
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="greenPepper" mnemonicParsing="false" onAction="#onGreenPepperPress" GridPane.rowIndex="1">
+                                       <graphic>
+                                          <ImageView fitHeight="77.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true" />
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="onion" mnemonicParsing="false" onAction="#onOnionPress" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <graphic>
+                                          <ImageView fitHeight="65.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true" />
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="tomato" mnemonicParsing="false" onAction="#onTomatoPress" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                       <graphic>
+                                          <ImageView fitHeight="69.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true" />
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="pineapple" mnemonicParsing="false" onAction="#onPineapplePress" GridPane.rowIndex="2">
+                                       <graphic>
+                                          <ImageView fitHeight="58.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true" />
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="mushroom" mnemonicParsing="false" onAction="#onMushroomPress" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                       <graphic>
+                                          <ImageView fitHeight="61.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                                       </graphic>
+                                    </Button>
+                                    <Label text="SUMMARY" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="TOP" />
+                                    <ListView fx:id="list3" prefHeight="200.0" prefWidth="347.0" GridPane.columnIndex="4" GridPane.rowSpan="2147483647">
+                                       <GridPane.margin>
+                                          <Insets top="20.0" />
+                                       </GridPane.margin>
+                                    </ListView>
+                                    <Button fx:id="home3" mnemonicParsing="false" onAction="#onHomePress" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+                                       <GridPane.margin>
+                                          <Insets right="2.0" />
+                                       </GridPane.margin>
+                                       <graphic>
+                                          <ImageView fitHeight="52.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true" />
+                                       </graphic>
+                                    </Button>
+                                    <Label text="Cheese">
+                                       <GridPane.margin>
+                                          <Insets bottom="100.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label text="+ $.50">
+                                       <GridPane.margin>
+                                          <Insets top="100.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label text="Pepperoni" GridPane.columnIndex="1">
+                                       <GridPane.margin>
+                                          <Insets bottom="100.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label text="+ $.50" GridPane.columnIndex="1">
+                                       <GridPane.margin>
+                                          <Insets top="100.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label text="Sausage" GridPane.columnIndex="2">
+                                       <GridPane.margin>
+                                          <Insets bottom="100.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label text="+ $.50" GridPane.columnIndex="2">
+                                       <GridPane.margin>
+                                          <Insets top="100.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label text="Green Pepper" GridPane.rowIndex="1">
+                                       <GridPane.margin>
+                                          <Insets bottom="100.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label text="+ $.50" GridPane.rowIndex="1">
+                                       <GridPane.margin>
+                                          <Insets top="100.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label text="Onion" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <GridPane.margin>
+                                          <Insets bottom="100.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label text="+ $.50" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <GridPane.margin>
+                                          <Insets top="100.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label text="Tomato" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                       <GridPane.margin>
+                                          <Insets bottom="100.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label text="+ $.50" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                       <GridPane.margin>
+                                          <Insets top="100.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label text="Pineapple" GridPane.rowIndex="2">
+                                       <GridPane.margin>
+                                          <Insets bottom="90.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label text="+ $.50" GridPane.rowIndex="2">
+                                       <GridPane.margin>
+                                          <Insets top="90.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label text="Mushroom" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                       <GridPane.margin>
+                                          <Insets bottom="90.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label text="+ $.50" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                       <GridPane.margin>
+                                          <Insets top="90.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Button fx:id="ham" mnemonicParsing="false" onAction="#onHamPress" GridPane.columnIndex="3">
+                                       <graphic>
+                                          <ImageView fitHeight="72.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true" />
+                                       </graphic>
+                                    </Button>
+                                    <Label text="Ham" GridPane.columnIndex="3">
+                                       <GridPane.margin>
+                                          <Insets bottom="100.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label text="+ $.50" GridPane.columnIndex="3">
+                                       <GridPane.margin>
+                                          <Insets top="100.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label text="Pick Your Toppings" GridPane.columnSpan="4" GridPane.valignment="TOP">
+                                       <GridPane.margin>
+                                          <Insets top="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                 </children>
+                              </GridPane>
                            </children>
-                        </GridPane>
-                     </children>
-                  </AnchorPane>
-            </content>
-          </Tab>
-        </tabs>
-      </TabPane>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </GridPane>
    </children>
-</GridPane>
+</Pane>

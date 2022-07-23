@@ -1,14 +1,219 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.momandpopspizzeria.Controllers.orderCustomizationController"
-            prefHeight="400.0" prefWidth="600.0">
-
-</AnchorPane>
+<Pane xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.momandpopspizzeria.Controllers.customization2Controller">
+   <children>
+      <GridPane prefHeight="720.0" prefWidth="1052.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                 <Tab onSelectionChanged="#onTab1Switch" text="Sizes">
+                    <content>
+                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                          <children>
+                             <GridPane prefHeight="684.0" prefWidth="1052.0">
+                                <columnConstraints>
+                                   <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                   <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                   <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                   <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                   <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                   <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                <children>
+                                   <Button fx:id="extraLarge" mnemonicParsing="false" onAction="#onExtraLargePress" prefHeight="59.0" prefWidth="89.0">
+                                      <graphic>
+                                         <ImageView fitHeight="70.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true" />
+                                      </graphic></Button>
+                                   <Button fx:id="large" mnemonicParsing="false" onAction="#onLargePress" GridPane.columnIndex="1">
+                                      <graphic>
+                                         <ImageView fitHeight="75.0" fitWidth="91.0" pickOnBounds="true" preserveRatio="true" />
+                                      </graphic></Button>
+                                   <Button fx:id="medium" mnemonicParsing="false" onAction="#onMediumPress" GridPane.columnIndex="2">
+                                      <graphic>
+                                         <ImageView fitHeight="76.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
+                                      </graphic></Button>
+                                   <Button fx:id="small" mnemonicParsing="false" onAction="#onSmallPress" GridPane.rowIndex="1">
+                                      <graphic>
+                                         <ImageView fitHeight="67.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                                      </graphic></Button>
+                                   <Button fx:id="kids" mnemonicParsing="false" onAction="#onKidsPress" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                      <graphic>
+                                         <ImageView fitHeight="61.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true" />
+                                      </graphic></Button>
+                                   <Button fx:id="home" mnemonicParsing="false" onAction="#onHomePress" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+                                      <graphic>
+                                         <ImageView fitHeight="86.0" fitWidth="92.0" pickOnBounds="true" preserveRatio="true" />
+                                      </graphic></Button>
+                                   <ListView fx:id="list" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowSpan="2147483647" />
+                                   <Label text="Extra Large">
+                                      <GridPane.margin>
+                                         <Insets bottom="100.0" />
+                                      </GridPane.margin></Label>
+                                   <Label text="\$1">
+                                      <GridPane.margin>
+                                         <Insets top="100.0" />
+                                      </GridPane.margin>
+                                   </Label>
+                                   <Label text="\$1" GridPane.columnIndex="1">
+                                      <GridPane.margin>
+                                         <Insets top="100.0" />
+                                      </GridPane.margin>
+                                   </Label>
+                                   <Label text="Large" GridPane.columnIndex="1">
+                                      <GridPane.margin>
+                                         <Insets bottom="100.0" />
+                                      </GridPane.margin>
+                                   </Label>
+                                   <Label text="\$1" GridPane.columnIndex="2">
+                                      <GridPane.margin>
+                                         <Insets top="100.0" />
+                                      </GridPane.margin>
+                                   </Label>
+                                   <Label text="Medium" GridPane.columnIndex="2">
+                                      <GridPane.margin>
+                                         <Insets bottom="100.0" />
+                                      </GridPane.margin>
+                                   </Label>
+                                   <Label text="\$1" GridPane.rowIndex="1">
+                                      <GridPane.margin>
+                                         <Insets top="100.0" />
+                                      </GridPane.margin>
+                                   </Label>
+                                   <Label text="Small" GridPane.rowIndex="1">
+                                      <GridPane.margin>
+                                         <Insets bottom="100.0" />
+                                      </GridPane.margin>
+                                   </Label>
+                                   <Label text="\$1" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                      <GridPane.margin>
+                                         <Insets top="100.0" />
+                                      </GridPane.margin>
+                                   </Label>
+                                   <Label text="Kids" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                      <GridPane.margin>
+                                         <Insets bottom="100.0" />
+                                      </GridPane.margin>
+                                   </Label>
+                                </children>
+                             </GridPane>
+                          </children></AnchorPane>
+                    </content>
+                 </Tab>
+                <Tab onSelectionChanged="#onTab2Switch" text="Flavors">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <GridPane prefHeight="684.0" prefWidth="1052.0">
+                                <columnConstraints>
+                                    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Button fx:id="pepsi" mnemonicParsing="false" onAction="#onPepsiPress" prefHeight="59.0" prefWidth="89.0">
+                                       <graphic>
+                                          <ImageView fitHeight="70.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true" />
+                                       </graphic></Button>
+                                    <Button fx:id="dietPepsi" mnemonicParsing="false" onAction="#onDietPepsiPress" GridPane.columnIndex="1">
+                                       <graphic>
+                                          <ImageView fitHeight="75.0" fitWidth="91.0" pickOnBounds="true" preserveRatio="true" />
+                                       </graphic></Button>
+                                    <Button fx:id="sunkist" mnemonicParsing="false" onAction="#onSunkistPress" GridPane.columnIndex="2">
+                                       <graphic>
+                                          <ImageView fitHeight="76.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
+                                       </graphic></Button>
+                                    <Button fx:id="dietSunkist" mnemonicParsing="false" onAction="#onDietSunkistPress" GridPane.rowIndex="1">
+                                       <graphic>
+                                          <ImageView fitHeight="67.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                                       </graphic></Button>
+                                    <Button fx:id="rootBeer" mnemonicParsing="false" onAction="#onRootBeerPress" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <graphic>
+                                          <ImageView fitHeight="61.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true" />
+                                       </graphic></Button>
+                                    <Button fx:id="dietRootBeer" mnemonicParsing="false" onAction="#onDietRootBeerPress" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                       <graphic>
+                                          <ImageView fitHeight="65.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true" />
+                                       </graphic></Button>
+                                    <Button fx:id="sierraMist" mnemonicParsing="false" onAction="#onSierraMistPress" GridPane.rowIndex="2">
+                                       <graphic>
+                                          <ImageView fitHeight="68.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true" />
+                                       </graphic></Button>
+                                    <Button fx:id="lemonade" mnemonicParsing="false" onAction="#onLemonadePress" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                       <graphic>
+                                          <ImageView fitHeight="62.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true" />
+                                       </graphic></Button>
+                                    <Button fx:id="home2" mnemonicParsing="false" onAction="#onHomePress" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+                                       <graphic>
+                                          <ImageView fitHeight="86.0" fitWidth="92.0" pickOnBounds="true" preserveRatio="true" />
+                                       </graphic></Button>
+                                    <ListView fx:id="list2" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowSpan="2147483647" />
+                                    <Label text="Pepsi">
+                                       <GridPane.margin>
+                                          <Insets bottom="100.0" />
+                                       </GridPane.margin></Label>
+                                    <Label text="Diet Pepsi" GridPane.columnIndex="1">
+                                       <GridPane.margin>
+                                          <Insets bottom="100.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label text="Sunkist" GridPane.columnIndex="2">
+                                       <GridPane.margin>
+                                          <Insets bottom="100.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label text="Diet Sunkist" GridPane.rowIndex="1">
+                                       <GridPane.margin>
+                                          <Insets bottom="100.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label text="Root Beer" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <GridPane.margin>
+                                          <Insets bottom="100.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label text="Diet Root Beer" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                       <GridPane.margin>
+                                          <Insets bottom="100.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label text="Sierra Mist" GridPane.rowIndex="2">
+                                       <GridPane.margin>
+                                          <Insets bottom="100.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label text="Lemonade" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                       <GridPane.margin>
+                                          <Insets bottom="100.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                 </children>
+                              </GridPane>
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </GridPane>
+   </children>
+</Pane>

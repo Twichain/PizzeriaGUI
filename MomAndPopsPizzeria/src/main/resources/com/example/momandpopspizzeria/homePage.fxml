@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ListView?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
 
-<Pane fx:id="child" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.momandpopspizzeria.Controllers.homePageController">
+<Pane fx:id="child" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.momandpopspizzeria.Controllers.homePageController">
    <children>
-      <GridPane fx:id="child" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1052.0">
+      <GridPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1052.0">
         <columnConstraints>
           <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="471.0" minWidth="10.0" prefWidth="296.0" />
@@ -40,11 +35,11 @@
             <Label fx:id="tax" text="Tax :" GridPane.columnIndex="2" GridPane.rowIndex="2" />
             <Label fx:id="subtotal" text="SubToTal :" GridPane.columnIndex="2" GridPane.rowIndex="2" GridPane.valignment="TOP">
                <GridPane.margin>
-                  <Insets top="30.0" />
+                  <Insets bottom="5.0" top="30.0" />
                </GridPane.margin>
             </Label>
             <Label fx:id="name" text="Name" GridPane.rowIndex="2" GridPane.valignment="TOP" />
-            <Label fx:id="dynamicName" text="*dynamic*" GridPane.rowIndex="2" GridPane.valignment="TOP">
+            <Label fx:id="dynamicName" GridPane.rowIndex="2" GridPane.valignment="TOP">
                <GridPane.margin>
                   <Insets top="20.0" />
                </GridPane.margin>
@@ -55,12 +50,7 @@
                   <Insets top="50.0" />
                </GridPane.margin>
             </Label>
-            <ListView fx:id="orderSummary" editable="true" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <ImageView fx:id="icon" fitHeight="223.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
-               <image>
-<!--            <Image url="@/C:/Users/mclem/Pictures/Oasis/favorites.jpg" />-->
-         </image>
-            </ImageView>
+            <ListView fx:id="orderSummary" editable="true" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: lightgrey;" GridPane.columnIndex="2" GridPane.rowIndex="1" />
             <Label fx:id="dynamicTax" text="*dynamic*" GridPane.columnIndex="2" GridPane.rowIndex="2">
                <GridPane.margin>
                   <Insets left="70.0" />
@@ -76,6 +66,10 @@
                   <Insets bottom="30.0" left="70.0" />
                </GridPane.margin>
             </Label>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <image>
+                  <Image url="@/pizzaSymbol.png" />
+               </image></ImageView>
          </children>
       </GridPane>
    </children>
