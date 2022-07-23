@@ -23,6 +23,7 @@ public class confirmationController {
     private Scene scene;
     private Parent root;
     private ArrayList<Customer> customers;
+    private ArrayList<String> orders;
 
     @FXML
     private Button home;
@@ -38,11 +39,14 @@ public class confirmationController {
     private Label tax;
     @FXML
     private Label total;
+    @FXML
+    private Label processed;
 
     //**EVENTS**//
     //home button
     @FXML
     protected void onHomeButtonClick(ActionEvent actionEvent) throws IOException {
+        processed.setVisible(false);
         FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("homePage.fxml"));
         root = loader.load();
         homePageController hpc = loader.getController();
@@ -52,6 +56,7 @@ public class confirmationController {
         if(customers!=null){
             hpc.setLabel(customers.get(0).getFirstName());
             hpc.setCustomers(customers);
+            hpc.setLabel2(customers.get(0).getProductRetrievalMethod());
         }
         stage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -62,6 +67,18 @@ public class confirmationController {
     //submit button (idk returns to the home screen with an empty list)
     @FXML
     protected void onSubmitPress(ActionEvent actionEvent){
+        if(orders==null){
+            orders = new ArrayList<>();
+        }
+        processed.setVisible(true);
+        orders.add(String.valueOf(order.getItems()));
+        /*System.out.println(orders);
+        System.out.println(customers);*/
+        order.getItems().clear();
+        customerInformation.getItems().clear();
+        subTotal.setText("$0");
+        tax.setText("$0");
+        total.setText("$0");
 
     }
 
@@ -107,9 +124,9 @@ public class confirmationController {
             }
             double taxNum= subTotalNum *0.05;
             double totalNum=subTotalNum+taxNum;
-            subTotal.setText("$ "+String.format("%.2f",subTotalNum));
-            tax.setText("$ "+String.format("%.2f",taxNum));
-            total.setText("$ "+String.format("%.2f",totalNum));
+            subTotal.setText("$"+String.format("%.2f",subTotalNum));
+            tax.setText("$"+String.format("%.2f",taxNum));
+            total.setText("$"+String.format("%.2f",totalNum));
 
         }
     }

@@ -84,6 +84,8 @@ public class loginController {
         }
         if(customers!=null){
             hpc.setCustomers(customers);
+            hpc.setLabel2(customers.get(0).getProductRetrievalMethod());
+            hpc.setLabel(customers.get(0).getFirstName());
         }
         stage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
         scene = new Scene(root);

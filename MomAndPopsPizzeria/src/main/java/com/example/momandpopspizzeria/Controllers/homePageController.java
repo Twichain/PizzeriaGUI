@@ -158,6 +158,14 @@ public class homePageController {
             dynamicName.setText(name);
         }
     }
+    public void setLabel2(String name) {
+        if(dynamicPickup==null) {
+            dynamicPickup=new Label();
+        }
+        if(name!=null) {
+            dynamicPickup.setText(name);
+        }
+    }
     //setListView items method for other controllers
     public void setListView(ListView<String> order) {
         if(orderSummary==null) {

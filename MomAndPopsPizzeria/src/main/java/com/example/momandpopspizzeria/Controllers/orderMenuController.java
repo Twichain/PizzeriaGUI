@@ -117,6 +117,7 @@ public class orderMenuController {
         if(customers!=null){
             hpc.setLabel(customers.get(0).getFirstName());
             hpc.setCustomers(customers);
+            hpc.setLabel2(customers.get(0).getProductRetrievalMethod());
         }
         stage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
         scene = new Scene(root);

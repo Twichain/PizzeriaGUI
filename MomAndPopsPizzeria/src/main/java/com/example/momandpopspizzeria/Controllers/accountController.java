@@ -111,6 +111,7 @@ public class accountController{
         if(customers!=null){
             hpc.setLabel(customers.get(0).getFirstName());
             hpc.setCustomers(customers);
+            hpc.setLabel2(customers.get(0).getProductRetrievalMethod());
         }else{
             hpc.setLabel("");
         }

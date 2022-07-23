@@ -34,7 +34,7 @@
                </GridPane.margin>
             </Label>
             <Label fx:id="pickupOrDelivery" text="Pickup/Delivery" GridPane.rowIndex="2" />
-            <Label fx:id="dynamicPickup" text="*dynamic*" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+            <Label fx:id="dynamicPickup" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                <GridPane.margin>
                   <Insets top="50.0" />
                </GridPane.margin>

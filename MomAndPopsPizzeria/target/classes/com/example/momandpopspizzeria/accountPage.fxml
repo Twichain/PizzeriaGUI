@@ -4,7 +4,6 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.paint.*?>
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
@@ -41,58 +40,14 @@
                   <Insets left="20.0" />
                </GridPane.margin>
             </Button>
-            <Label fx:id="firstName" text="First name*" GridPane.columnIndex="2" GridPane.rowIndex="2">
-               <textFill>
-                  <LinearGradient endX="1.0" endY="0.3459715639810427" startX="0.943127962085308" startY="0.6255924170616114">
-                     <stops>
-                        <Stop>
-                           <color>
-                              <Color />
-                           </color>
-                        </Stop>
-                        <Stop offset="0.007662835249042145">
-                           <color>
-                              <Color />
-                           </color>
-                        </Stop>
-                        <Stop offset="1.0">
-                           <color>
-                              <Color red="1.0" />
-                           </color>
-                        </Stop>
-                     </stops>
-                  </LinearGradient>
-               </textFill>
-            </Label>
+            <Label fx:id="firstName" text="First name*" GridPane.columnIndex="2" GridPane.rowIndex="2" />
             <Label fx:id="lastName" text="Last name" GridPane.rowIndex="3" />
-            <Label fx:id="phoneNumber" text="Phone Number*" GridPane.rowIndex="2">
-               <textFill>
-                  <LinearGradient endX="1.0" endY="0.3459715639810427" startX="0.943127962085308" startY="0.6255924170616114">
-                     <stops>
-                        <Stop>
-                           <color>
-                              <Color />
-                           </color>
-                        </Stop>
-                        <Stop offset="0.007662835249042145">
-                           <color>
-                              <Color />
-                           </color>
-                        </Stop>
-                        <Stop offset="1.0">
-                           <color>
-                              <Color red="1.0" />
-                           </color>
-                        </Stop>
-                     </stops>
-                  </LinearGradient>
-               </textFill>
-            </Label>
+            <Label fx:id="phoneNumber" text="Phone Number*" GridPane.rowIndex="2" />
             <Label fx:id="streetAddress" text="Street Address" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <Label fx:id="city" text="City" GridPane.rowIndex="4" />
             <Label fx:id="state" text="State" GridPane.columnIndex="2" GridPane.rowIndex="3" />
             <Label fx:id="zipCode" text="ZipCode" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-            <Label fx:id="paymentType" text="[Preferred Payment Type]" GridPane.rowIndex="5">
+            <Label fx:id="paymentType" text="Payment Type*" GridPane.rowIndex="5">
                <GridPane.margin>
                   <Insets bottom="50.0" />
                </GridPane.margin>
@@ -114,7 +69,7 @@
                         <Insets left="5.0" top="5.0" />
                      </HBox.margin>
                   </RadioButton>
-                  <RadioButton fx:id="creditCard" mnemonicParsing="false" onAction="#onCreditCardRadioSelected" text="Credit Card *dynamic*">
+                  <RadioButton fx:id="creditCard" mnemonicParsing="false" onAction="#onCreditCardRadioSelected" text="Credit Card">
                      <HBox.margin>
                         <Insets left="5.0" top="5.0" />
                      </HBox.margin>
@@ -124,7 +79,7 @@
                   <Insets right="5.0" />
                </GridPane.margin>
             </HBox>
-            <Label fx:id="creditCardNumber" text="*dynamic Credit Card number*" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="5" GridPane.valignment="TOP" />
+            <Label fx:id="creditCardNumber" text="Credit Card Number" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="5" GridPane.valignment="TOP" />
             <TextField fx:id="firstNameTextField" alignment="CENTER" promptText="first name" GridPane.columnIndex="2" GridPane.rowIndex="2">
                <GridPane.margin>
                   <Insets left="20.0" right="20.0" top="50.0" />
@@ -169,7 +124,7 @@
                </GridPane.margin>
             </TextField>
             <Line fx:id="headerBorder" endX="550.0" startX="-500.0" strokeLineCap="ROUND" strokeMiterLimit="20.0" strokeWidth="2.0" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-            <Label fx:id="creditCardSecurityNumber" text="*dynamic credit card security number*" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label fx:id="creditCardSecurityNumber" text="Credit Card Security Number" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="5" />
             <TextField fx:id="creditCardSecurityNumberTextField" alignment="CENTER" promptText="### *dynmaic*" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="5">
                <GridPane.margin>
                   <Insets left="20.0" right="20.0" top="50.0" />
@@ -179,27 +134,6 @@
                <GridPane.margin>
                   <Insets />
                </GridPane.margin>
-               <textFill>
-                  <LinearGradient endX="1.0" endY="0.3459715639810427" startX="0.943127962085308" startY="0.6255924170616114">
-                     <stops>
-                        <Stop>
-                           <color>
-                              <Color />
-                           </color>
-                        </Stop>
-                        <Stop offset="0.007662835249042145">
-                           <color>
-                              <Color />
-                           </color>
-                        </Stop>
-                        <Stop offset="1.0">
-                           <color>
-                              <Color red="1.0" />
-                           </color>
-                        </Stop>
-                     </stops>
-                  </LinearGradient>
-               </textFill>
             </Label>
             <TextField fx:id="passwordTextField" alignment="CENTER" promptText="password" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <GridPane.margin>
@@ -215,7 +149,7 @@
                   <Insets top="30.0" />
                </GridPane.margin></Label>
             <ListView fx:id="list" prefHeight="200.0" prefWidth="200.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-            <Label text="[Pick-up / Delivery]" GridPane.columnIndex="2" GridPane.rowIndex="4">
+            <Label text="Pick-up / Delivery*" GridPane.columnIndex="2" GridPane.rowIndex="4">
                <GridPane.margin>
                   <Insets bottom="50.0" />
                </GridPane.margin>

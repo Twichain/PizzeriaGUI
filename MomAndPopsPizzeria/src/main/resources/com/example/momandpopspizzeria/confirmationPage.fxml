@@ -30,7 +30,7 @@
                   <Insets left="10.0" />
                </GridPane.margin>
             </ListView>
-            <Button fx:id="submit" mnemonicParsing="false" text="Submit" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+            <Button fx:id="submit" mnemonicParsing="false" onAction="#onSubmitPress" text="Submit" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                <font>
                   <Font size="18.0" />
                </font>
@@ -69,6 +69,11 @@
                </GridPane.margin>
             </Label>
             <Label text="Tax:" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label fx:id="processed" text="Order Successfully Processed" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets top="10.0" />
+               </GridPane.margin>
+            </Label>
          </children>
       </GridPane>
    </children>
