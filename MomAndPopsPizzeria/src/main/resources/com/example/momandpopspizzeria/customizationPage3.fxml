@@ -39,17 +39,26 @@
                                  <children>
                                     <Button fx:id="breadsticks" mnemonicParsing="false" onAction="#onBreadSticksPress">
                                        <graphic>
-                                          <ImageView fitHeight="71.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true" />
+                                          <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../pictures/Breadsticks.png" />
+                                             </image></ImageView>
                                        </graphic>
                                     </Button>
                                     <Button fx:id="breadstickBites" mnemonicParsing="false" onAction="#onBreadstickBitesPress" GridPane.columnIndex="1">
                                        <graphic>
-                                          <ImageView fitHeight="62.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true" />
+                                          <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../pictures/BreadstickBites.png" />
+                                             </image></ImageView>
                                        </graphic>
                                     </Button>
                                     <Button fx:id="bigChocolateChipCookie" mnemonicParsing="false" onAction="#onBigChocolateChipCookiePress" GridPane.columnIndex="2">
                                        <graphic>
-                                          <ImageView fitHeight="66.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true" />
+                                          <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../pictures/ChocolateChipCookie.png" />
+                                             </image></ImageView>
                                        </graphic>
                                     </Button>
                                     <ListView fx:id="list" editable="true" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowSpan="2147483647">
@@ -59,7 +68,10 @@
                                     </ListView>
                                     <Button fx:id="home" mnemonicParsing="false" onAction="#onHomePress" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
                                        <graphic>
-                                          <ImageView fitHeight="64.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true" />
+                                          <ImageView fitHeight="70.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../pictures/homeButton.png" />
+                                             </image></ImageView>
                                        </graphic>
                                        <GridPane.margin>
                                           <Insets bottom="5.0" />
@@ -67,32 +79,32 @@
                                     </Button>
                                     <Label text="\$4">
                                        <GridPane.margin>
-                                          <Insets top="100.0" />
+                                          <Insets top="200.0" />
                                        </GridPane.margin>
                                     </Label>
                                     <Label text="Breadsticks">
                                        <GridPane.margin>
-                                          <Insets bottom="100.0" />
+                                          <Insets bottom="200.0" />
                                        </GridPane.margin>
                                     </Label>
                                     <Label text="\$2" GridPane.columnIndex="1">
                                        <GridPane.margin>
-                                          <Insets top="100.0" />
+                                          <Insets top="200.0" />
                                        </GridPane.margin>
                                     </Label>
                                     <Label text="Breadstick Bites" GridPane.columnIndex="1">
                                        <GridPane.margin>
-                                          <Insets bottom="100.0" />
+                                          <Insets bottom="200.0" />
                                        </GridPane.margin>
                                     </Label>
                                     <Label text="\$4" GridPane.columnIndex="2">
                                        <GridPane.margin>
-                                          <Insets top="100.0" />
+                                          <Insets top="200.0" />
                                        </GridPane.margin>
                                     </Label>
                                     <Label text="Big Chocolate Chip Cookie" GridPane.columnIndex="2">
                                        <GridPane.margin>
-                                          <Insets bottom="100.0" />
+                                          <Insets bottom="200.0" />
                                        </GridPane.margin>
                                     </Label>
                                  </children>

@@ -27,7 +27,10 @@
                <children>
                   <Button fx:id="home" alignment="CENTER" mnemonicParsing="false" onAction="#onHomeButtonClick">
                      <graphic>
-                        <ImageView fitHeight="39.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="70.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../pictures/homeButton.png" />
+                           </image></ImageView>
                      </graphic>
                      <HBox.margin>
                         <Insets left="-50.0" right="200.0" />
@@ -35,7 +38,7 @@
                   </Button>
                   <Label fx:id="menu" alignment="BASELINE_CENTER" contentDisplay="CENTER" text="Menu">
                      <font>
-                        <Font size="48.0" />
+                        <Font size="60.0" />
                      </font>
                      <HBox.margin>
                         <Insets left="150.0" right="400.0" />
@@ -46,35 +49,47 @@
                   <Insets bottom="8.0" />
                </GridPane.margin>
             </HBox>
-            <Button fx:id="pizzas" alignment="CENTER" mnemonicParsing="false" onAction="#onPizzasButtonClick" prefHeight="33.0" prefWidth="138.0" text="Pizzas" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+            <Button fx:id="pizzas" alignment="CENTER" mnemonicParsing="false" onAction="#onPizzasButtonClick" prefHeight="50.0" prefWidth="150.0" text="Pizzas" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
                <GridPane.margin>
                   <Insets top="5.0" />
                </GridPane.margin>
+               <font>
+                  <Font size="20.0" />
+               </font>
             </Button>
-            <Button fx:id="sides" mnemonicParsing="false" onAction="#onSidesButtonClick" prefHeight="32.0" prefWidth="137.0" text="Sides" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
+            <Button fx:id="sides" mnemonicParsing="false" onAction="#onSidesButtonClick" prefHeight="50.0" prefWidth="150.0" text="Sides" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
                <GridPane.margin>
                   <Insets top="5.0" />
                </GridPane.margin>
+               <font>
+                  <Font size="20.0" />
+               </font>
             </Button>
-            <Button fx:id="drinks" mnemonicParsing="false" onAction="#onDrinksButtonClick" prefHeight="28.0" prefWidth="153.0" text="Drinks" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="TOP">
+            <Button fx:id="drinks" mnemonicParsing="false" onAction="#onDrinksButtonClick" prefHeight="50.0" prefWidth="150.0" text="Drinks" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="TOP">
                <GridPane.margin>
                   <Insets top="5.0" />
                </GridPane.margin>
+               <font>
+                  <Font size="20.0" />
+               </font>
             </Button>
-            <ImageView fitHeight="42.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" />
-            <ImageView fitHeight="52.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" />
-            <ImageView fitHeight="57.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" />
-            <ImageView fitHeight="44.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" />
-            <ImageView fitHeight="51.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" />
-            <ImageView fitHeight="41.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" />
-            <ImageView fitHeight="47.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3" GridPane.valignment="BOTTOM" />
-            <ImageView fitHeight="49.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="BOTTOM" />
-            <ImageView fitHeight="50.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="BOTTOM" />
+            <ImageView fitHeight="70.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" />
+            <ImageView fitHeight="70.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" />
+            <ImageView fitHeight="70.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" />
+            <ImageView fitHeight="70.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" />
+            <ImageView fitHeight="70.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" />
+            <ImageView fitHeight="70.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" />
+            <ImageView fitHeight="70.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3" GridPane.valignment="BOTTOM" />
+            <ImageView fitHeight="70.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="BOTTOM" />
+            <ImageView fitHeight="70.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="BOTTOM" />
             <ListView fx:id="order" editable="true" prefHeight="586.0" prefWidth="255.0" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.rowSpan="2147483647" />
             <Button fx:id="submit" mnemonicParsing="false" onAction="#onClearButtonClick" text="Clear" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
                <GridPane.margin>
                   <Insets bottom="2.0" />
                </GridPane.margin>
+               <font>
+                  <Font size="20.0" />
+               </font>
             </Button>
          </children>
       </GridPane>

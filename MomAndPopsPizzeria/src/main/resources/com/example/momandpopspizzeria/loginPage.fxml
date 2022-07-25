@@ -63,7 +63,10 @@
          </font></Button>
       <Button fx:id="home" mnemonicParsing="false" onAction="#onHomePress" GridPane.rowIndex="5">
          <graphic>
-            <ImageView fitHeight="74.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="70.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../pictures/homeButton.png" />
+               </image></ImageView>
          </graphic>
          <GridPane.margin>
             <Insets left="2.0" />

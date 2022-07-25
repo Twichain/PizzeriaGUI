@@ -38,22 +38,34 @@
                                  <children>
                                     <Button fx:id="extraLarge" mnemonicParsing="false" onAction="#onExtraLargePress">
                                        <graphic>
-                                          <ImageView fitHeight="59.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true" />
+                                          <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../pictures/x-LargePizza.png" />
+                                             </image></ImageView>
                                        </graphic>
                                     </Button>
                                     <Button fx:id="large" mnemonicParsing="false" onAction="#onLargePress" GridPane.columnIndex="1">
                                        <graphic>
-                                          <ImageView fitHeight="62.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true" />
+                                          <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../pictures/largePizza.png" />
+                                             </image></ImageView>
                                        </graphic>
                                     </Button>
                                     <Button fx:id="medium" mnemonicParsing="false" onAction="#onMediumPress" GridPane.columnIndex="2">
                                        <graphic>
-                                          <ImageView fitHeight="58.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true" />
+                                          <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../pictures/mediumPizza.png" />
+                                             </image></ImageView>
                                        </graphic>
                                     </Button>
                                     <Button fx:id="small" mnemonicParsing="false" onAction="#onSmallPress" GridPane.rowIndex="1">
                                        <graphic>
-                                          <ImageView fitHeight="62.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true" />
+                                          <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../pictures/smallPizza.png" />
+                                             </image></ImageView>
                                        </graphic>
                                     </Button>
                                     <Label text="SUMMARY" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="TOP" />
@@ -64,7 +76,10 @@
                                     </ListView>
                                     <Button fx:id="home" mnemonicParsing="false" onAction="#onHomePress" prefHeight="58.0" prefWidth="67.0" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
                                        <graphic>
-                                          <ImageView fitHeight="62.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true" />
+                                          <ImageView fitHeight="70.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../pictures/homeButton.png" />
+                                             </image></ImageView>
                                        </graphic>
                                        <GridPane.margin>
                                           <Insets bottom="2.0" right="2.0" />
@@ -72,42 +87,42 @@
                                     </Button>
                                     <Label alignment="CENTER" text="Extra Large">
                                        <GridPane.margin>
-                                          <Insets bottom="100.0" />
+                                          <Insets bottom="200.0" />
                                        </GridPane.margin>
                                     </Label>
                                     <Label text="Large" GridPane.columnIndex="1">
                                        <GridPane.margin>
-                                          <Insets bottom="100.0" />
+                                          <Insets bottom="200.0" />
                                        </GridPane.margin>
                                     </Label>
                                     <Label text="Medium" GridPane.columnIndex="2">
                                        <GridPane.margin>
-                                          <Insets bottom="100.0" />
+                                          <Insets bottom="200.0" />
                                        </GridPane.margin>
                                     </Label>
                                     <Label text="Small" GridPane.rowIndex="1">
                                        <GridPane.margin>
-                                          <Insets bottom="100.0" />
+                                          <Insets bottom="200.0" />
                                        </GridPane.margin>
                                     </Label>
                                     <Label text="+ $10">
                                        <GridPane.margin>
-                                          <Insets top="100.0" />
+                                          <Insets top="200.0" />
                                        </GridPane.margin>
                                     </Label>
                                     <Label text="+ $8" GridPane.columnIndex="1">
                                        <GridPane.margin>
-                                          <Insets top="100.0" />
+                                          <Insets top="200.0" />
                                        </GridPane.margin>
                                     </Label>
                                     <Label text="+ $6" GridPane.columnIndex="2">
                                        <GridPane.margin>
-                                          <Insets top="100.0" />
+                                          <Insets top="200.0" />
                                        </GridPane.margin>
                                     </Label>
                                     <Label text="+ $4" GridPane.rowIndex="1">
                                        <GridPane.margin>
-                                          <Insets top="100.0" />
+                                          <Insets top="200.0" />
                                        </GridPane.margin>
                                     </Label>
                                     <Label text="Pick a Size" GridPane.columnSpan="3" GridPane.valignment="TOP" />
@@ -136,17 +151,26 @@
                                  <children>
                                     <Button fx:id="thinCrust" mnemonicParsing="false" onAction="#onThinCrustPress">
                                        <graphic>
-                                          <ImageView fitHeight="67.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true" />
+                                          <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../pictures/thinCrust.png" />
+                                             </image></ImageView>
                                        </graphic>
                                     </Button>
                                     <Button fx:id="regularCrust" mnemonicParsing="false" onAction="#onRegularCrustPress" GridPane.columnIndex="1">
                                        <graphic>
-                                          <ImageView fitHeight="62.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                                          <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../pictures/regularCrust.png" />
+                                             </image></ImageView>
                                        </graphic>
                                     </Button>
                                     <Button fx:id="panCrust" mnemonicParsing="false" onAction="#onPanCrustPress" GridPane.columnIndex="2">
                                        <graphic>
-                                          <ImageView fitHeight="47.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+                                          <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../pictures/panCrust.png" />
+                                             </image></ImageView>
                                        </graphic>
                                     </Button>
                                     <Label text="SUMMARY" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="TOP" />
@@ -157,7 +181,10 @@
                                     </ListView>
                                     <Button fx:id="home2" mnemonicParsing="false" onAction="#onHomePress" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
                                        <graphic>
-                                          <ImageView fitHeight="60.0" fitWidth="78.0" pickOnBounds="true" preserveRatio="true" />
+                                          <ImageView fitHeight="70.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../pictures/homeButton.png" />
+                                             </image></ImageView>
                                        </graphic>
                                        <GridPane.margin>
                                           <Insets bottom="2.0" right="2.0" />
@@ -165,37 +192,37 @@
                                     </Button>
                                     <Label text="+ $1">
                                        <GridPane.margin>
-                                          <Insets top="100.0" />
+                                          <Insets top="200.0" />
                                        </GridPane.margin>
                                     </Label>
                                     <Label text="+ $0" GridPane.columnIndex="1">
                                        <GridPane.margin>
-                                          <Insets top="100.0" />
+                                          <Insets top="200.0" />
                                        </GridPane.margin>
                                     </Label>
                                     <Label text="+ $2" GridPane.columnIndex="2">
                                        <GridPane.margin>
-                                          <Insets top="100.0" />
+                                          <Insets top="200.0" />
                                        </GridPane.margin>
                                     </Label>
                                     <Label text="Thin Crust">
                                        <GridPane.margin>
-                                          <Insets bottom="100.0" />
+                                          <Insets bottom="200.0" />
                                        </GridPane.margin>
                                     </Label>
                                     <Label text="Regular Crust" GridPane.columnIndex="1">
                                        <GridPane.margin>
-                                          <Insets bottom="100.0" />
+                                          <Insets bottom="200.0" />
                                        </GridPane.margin>
                                     </Label>
                                     <Label text="Pan Crust" GridPane.columnIndex="2">
                                        <GridPane.margin>
-                                          <Insets bottom="100.0" />
+                                          <Insets bottom="200.0" />
                                        </GridPane.margin>
                                     </Label>
                                     <Label text="Pick a Crust" GridPane.columnSpan="3" GridPane.valignment="TOP">
                                        <GridPane.margin>
-                                          <Insets top="5.0" />
+                                          <Insets />
                                        </GridPane.margin>
                                     </Label>
                                  </children>
@@ -224,42 +251,66 @@
                                  <children>
                                     <Button fx:id="cheese" mnemonicParsing="false" onAction="#onCheesePress">
                                        <graphic>
-                                          <ImageView fitHeight="70.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true" />
+                                          <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../pictures/Cheese.png" />
+                                             </image></ImageView>
                                        </graphic>
                                     </Button>
                                     <Button fx:id="pepperoni" mnemonicParsing="false" onAction="#onPepperoniPress" GridPane.columnIndex="1">
                                        <graphic>
-                                          <ImageView fitHeight="60.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true" />
+                                          <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../pictures/Pepperoni.png" />
+                                             </image></ImageView>
                                        </graphic>
                                     </Button>
                                     <Button fx:id="sausage" mnemonicParsing="false" onAction="#onSausagePress" GridPane.columnIndex="2">
                                        <graphic>
-                                          <ImageView fitHeight="63.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true" />
+                                          <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../pictures/Sausage.png" />
+                                             </image></ImageView>
                                        </graphic>
                                     </Button>
                                     <Button fx:id="greenPepper" mnemonicParsing="false" onAction="#onGreenPepperPress" GridPane.rowIndex="1">
                                        <graphic>
-                                          <ImageView fitHeight="77.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true" />
+                                          <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../pictures/BellPepper.png" />
+                                             </image></ImageView>
                                        </graphic>
                                     </Button>
                                     <Button fx:id="onion" mnemonicParsing="false" onAction="#onOnionPress" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                        <graphic>
-                                          <ImageView fitHeight="65.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true" />
+                                          <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../pictures/Onion.png" />
+                                             </image></ImageView>
                                        </graphic>
                                     </Button>
                                     <Button fx:id="tomato" mnemonicParsing="false" onAction="#onTomatoPress" GridPane.columnIndex="2" GridPane.rowIndex="1">
                                        <graphic>
-                                          <ImageView fitHeight="69.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true" />
+                                          <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../pictures/Tomato.png" />
+                                             </image></ImageView>
                                        </graphic>
                                     </Button>
                                     <Button fx:id="pineapple" mnemonicParsing="false" onAction="#onPineapplePress" GridPane.rowIndex="2">
                                        <graphic>
-                                          <ImageView fitHeight="58.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true" />
+                                          <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../pictures/Pineapple.png" />
+                                             </image></ImageView>
                                        </graphic>
                                     </Button>
                                     <Button fx:id="mushroom" mnemonicParsing="false" onAction="#onMushroomPress" GridPane.columnIndex="3" GridPane.rowIndex="1">
                                        <graphic>
-                                          <ImageView fitHeight="61.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                                          <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../pictures/Mushroom.png" />
+                                             </image></ImageView>
                                        </graphic>
                                     </Button>
                                     <Label text="SUMMARY" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="TOP" />
@@ -273,102 +324,108 @@
                                           <Insets right="2.0" />
                                        </GridPane.margin>
                                        <graphic>
-                                          <ImageView fitHeight="52.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true" />
+                                          <ImageView fitHeight="70.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../pictures/homeButton.png" />
+                                             </image></ImageView>
                                        </graphic>
                                     </Button>
                                     <Label text="Cheese">
                                        <GridPane.margin>
-                                          <Insets bottom="100.0" />
+                                          <Insets bottom="200.0" />
                                        </GridPane.margin>
                                     </Label>
                                     <Label text="+ $.50">
                                        <GridPane.margin>
-                                          <Insets top="100.0" />
+                                          <Insets top="200.0" />
                                        </GridPane.margin>
                                     </Label>
                                     <Label text="Pepperoni" GridPane.columnIndex="1">
                                        <GridPane.margin>
-                                          <Insets bottom="100.0" />
+                                          <Insets bottom="200.0" />
                                        </GridPane.margin>
                                     </Label>
                                     <Label text="+ $.50" GridPane.columnIndex="1">
                                        <GridPane.margin>
-                                          <Insets top="100.0" />
+                                          <Insets top="200.0" />
                                        </GridPane.margin>
                                     </Label>
                                     <Label text="Sausage" GridPane.columnIndex="2">
                                        <GridPane.margin>
-                                          <Insets bottom="100.0" />
+                                          <Insets bottom="200.0" />
                                        </GridPane.margin>
                                     </Label>
                                     <Label text="+ $.50" GridPane.columnIndex="2">
                                        <GridPane.margin>
-                                          <Insets top="100.0" />
+                                          <Insets top="200.0" />
                                        </GridPane.margin>
                                     </Label>
                                     <Label text="Green Pepper" GridPane.rowIndex="1">
                                        <GridPane.margin>
-                                          <Insets bottom="100.0" />
+                                          <Insets bottom="200.0" />
                                        </GridPane.margin>
                                     </Label>
                                     <Label text="+ $.50" GridPane.rowIndex="1">
                                        <GridPane.margin>
-                                          <Insets top="100.0" />
+                                          <Insets top="200.0" />
                                        </GridPane.margin>
                                     </Label>
                                     <Label text="Onion" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                        <GridPane.margin>
-                                          <Insets bottom="100.0" />
+                                          <Insets bottom="200.0" />
                                        </GridPane.margin>
                                     </Label>
                                     <Label text="+ $.50" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                        <GridPane.margin>
-                                          <Insets top="100.0" />
+                                          <Insets top="200.0" />
                                        </GridPane.margin>
                                     </Label>
                                     <Label text="Tomato" GridPane.columnIndex="2" GridPane.rowIndex="1">
                                        <GridPane.margin>
-                                          <Insets bottom="100.0" />
+                                          <Insets bottom="200.0" />
                                        </GridPane.margin>
                                     </Label>
                                     <Label text="+ $.50" GridPane.columnIndex="2" GridPane.rowIndex="1">
                                        <GridPane.margin>
-                                          <Insets top="100.0" />
+                                          <Insets top="200.0" />
                                        </GridPane.margin>
                                     </Label>
                                     <Label text="Pineapple" GridPane.rowIndex="2">
                                        <GridPane.margin>
-                                          <Insets bottom="90.0" />
+                                          <Insets bottom="200.0" />
                                        </GridPane.margin>
                                     </Label>
                                     <Label text="+ $.50" GridPane.rowIndex="2">
                                        <GridPane.margin>
-                                          <Insets top="90.0" />
+                                          <Insets top="200.0" />
                                        </GridPane.margin>
                                     </Label>
                                     <Label text="Mushroom" GridPane.columnIndex="3" GridPane.rowIndex="1">
                                        <GridPane.margin>
-                                          <Insets bottom="90.0" />
+                                          <Insets bottom="200.0" />
                                        </GridPane.margin>
                                     </Label>
                                     <Label text="+ $.50" GridPane.columnIndex="3" GridPane.rowIndex="1">
                                        <GridPane.margin>
-                                          <Insets top="90.0" />
+                                          <Insets top="200.0" />
                                        </GridPane.margin>
                                     </Label>
                                     <Button fx:id="ham" mnemonicParsing="false" onAction="#onHamPress" GridPane.columnIndex="3">
                                        <graphic>
-                                          <ImageView fitHeight="72.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true" />
+                                          <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../pictures/Ham.png" />
+                                             </image></ImageView>
                                        </graphic>
                                     </Button>
                                     <Label text="Ham" GridPane.columnIndex="3">
                                        <GridPane.margin>
-                                          <Insets bottom="100.0" />
+                                          <Insets bottom="200.0" />
                                        </GridPane.margin>
                                     </Label>
                                     <Label text="+ $.50" GridPane.columnIndex="3">
                                        <GridPane.margin>
-                                          <Insets top="100.0" />
+                                          <Insets top="200.0" />
                                        </GridPane.margin>
                                     </Label>
                                     <Label text="Pick Your Toppings" GridPane.columnSpan="4" GridPane.valignment="TOP">
