@@ -24,6 +24,7 @@ public class accountController{
     private Stage stage;
     private Scene scene;
     private Parent root;
+    @FXML
     private String paymentType;
     private String productRetrieval;
     private ArrayList<Customer> customers;

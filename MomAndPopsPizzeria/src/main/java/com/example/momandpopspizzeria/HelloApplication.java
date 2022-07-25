@@ -20,13 +20,6 @@ public class HelloApplication extends Application {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        //potentially deprecated
-        /*FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("homePage.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 1052, 720);
-        scene.getStylesheets().add("style.css");
-        stage.setTitle("Hello!");
-        stage.setScene(scene);
-        stage.show();*/
     }
 
     public static void main(String[] args) {
