@@ -6,26 +6,25 @@
     //-fx-background-size:cover;
 }
 #summary{
-    -fx-font-size: 50;
+
 
 }
 .label{
-    -fx-font-size: 20;
+
 }
 .button{
     -fx-base: #66BB6A; //green 400
-    -fx-font-size: 25;
+
     -fx-effect: dropshadow( one-pass-box , black , 8 , 0.0 , 2 , 0 );
 
 }
 #subtotal{
-    -fx-font-size: 15;
+
 }
 #tax{
     -fx-font-size: 15;
 }
 #total{
-    -fx-font-size: 15;
 }
 
 .list-view {
@@ -33,7 +32,6 @@
     -fx-background-color: #66BB6A;
 }
 #orderMenu{
--fx-font-size: 60;
 
 }
 
