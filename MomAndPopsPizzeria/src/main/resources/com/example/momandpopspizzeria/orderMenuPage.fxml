@@ -73,17 +73,62 @@
                   <Font size="20.0" />
                </font>
             </Button>
-            <ImageView fitHeight="70.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" />
-            <ImageView fitHeight="70.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" />
-            <ImageView fitHeight="70.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" />
-            <ImageView fitHeight="70.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" />
-            <ImageView fitHeight="70.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" />
-            <ImageView fitHeight="70.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" />
-            <ImageView fitHeight="70.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3" GridPane.valignment="BOTTOM" />
-            <ImageView fitHeight="70.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="BOTTOM" />
-            <ImageView fitHeight="70.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="BOTTOM" />
+            <ImageView fitHeight="100.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+               <image>
+                  <Image url="@../../../pictures/pizza1.png" />
+               </image>
+               <GridPane.margin>
+                  <Insets right="200.0" />
+               </GridPane.margin></ImageView>
+            <ImageView fitHeight="100.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+               <image>
+                  <Image url="@../../../pictures/pizza2.png" />
+               </image></ImageView>
+            <ImageView fitHeight="100.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+               <image>
+                  <Image url="@../../../pictures/pizza3.png" />
+               </image>
+               <GridPane.margin>
+                  <Insets left="200.0" />
+               </GridPane.margin></ImageView>
+            <ImageView fitHeight="100.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+               <image>
+                  <Image url="@../../../pictures/Breadsticks.png" />
+               </image>
+               <GridPane.margin>
+                  <Insets right="200.0" />
+               </GridPane.margin></ImageView>
+            <ImageView fitHeight="100.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+               <image>
+                  <Image url="@../../../pictures/BreadstickBites.png" />
+               </image></ImageView>
+            <ImageView fitHeight="100.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+               <image>
+                  <Image url="@../../../pictures/ChocolateChipCookie.png" />
+               </image>
+               <GridPane.margin>
+                  <Insets left="200.0" />
+               </GridPane.margin></ImageView>
+            <ImageView fitHeight="100.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+               <image>
+                  <Image url="@../../../pictures/Pepsi.png" />
+               </image>
+               <GridPane.margin>
+                  <Insets right="200.0" />
+               </GridPane.margin></ImageView>
+            <ImageView fitHeight="100.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+               <image>
+                  <Image url="@../../../pictures/SierraMist.png" />
+               </image></ImageView>
+            <ImageView fitHeight="100.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+               <image>
+                  <Image url="@../../../pictures/DietSunkist.png" />
+               </image>
+               <GridPane.margin>
+                  <Insets left="200.0" />
+               </GridPane.margin></ImageView>
             <ListView fx:id="order" editable="true" prefHeight="586.0" prefWidth="255.0" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.rowSpan="2147483647" />
-            <Button fx:id="submit" mnemonicParsing="false" onAction="#onClearButtonClick" text="Clear" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+            <Button fx:id="submit" mnemonicParsing="false" onAction="#onClearButtonClick" text="Clear" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
                <GridPane.margin>
                   <Insets bottom="2.0" />
                </GridPane.margin>

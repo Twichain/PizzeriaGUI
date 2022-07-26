@@ -1,19 +1,19 @@
 package com.example.momandpopspizzeria.ClassObjects;
-//holds the constructor for the pizza toppings
+//Holds the constructor for the pizza toppings
 public class Toppings {
-    //attributes
+    //Attributes
     String topping;
     double price;
-    //constructor
+    //Constructor
     public Toppings(String topping, double price){
         this.topping=topping;
         this.price=price;
     }
-    //getters
+    //Getters
     public double getPrice() {return price;}
     public String getTopping() {return topping;}
 
-    //setters
+    //Setters
     public void setPrice(double price) {this.price = price;}
     public void setTopping(String topping) {this.topping = topping;}
 

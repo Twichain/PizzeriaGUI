@@ -5,34 +5,16 @@
     //-fx-background-image:url('../Images/pizza logo 3.png');
     //-fx-background-size:cover;
 }
-#summary{
-
-
-}
-.label{
-
-}
-.button{
+Button{
     -fx-base: #66BB6A; //green 400
-
     -fx-effect: dropshadow( one-pass-box , black , 8 , 0.0 , 2 , 0 );
-
-}
-#subtotal{
-
 }
 #tax{
     -fx-font-size: 15;
 }
-#total{
-}
-
-.list-view {
+ListView {
     -fx-background-radius: 20;
     -fx-background-color: #66BB6A;
-}
-#orderMenu{
-
 }
 
 

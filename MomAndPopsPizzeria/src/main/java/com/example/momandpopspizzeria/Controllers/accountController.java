@@ -1,7 +1,7 @@
 package com.example.momandpopspizzeria.Controllers;
 
 import com.example.momandpopspizzeria.ClassObjects.Customer;
-import com.example.momandpopspizzeria.HelloApplication;
+import com.example.momandpopspizzeria.MomAndPopsPizzeria;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -9,74 +9,43 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.Pane;
-import javafx.scene.shape.Line;
 import javafx.stage.Stage;
 
 
 import java.io.IOException;
 import java.util.ArrayList;
 
-//this class stores the functionalities for the account page
+//This class stores the functionalities for the account page
 public class accountController{
-    //attributes
+    //Attributes
     private Stage stage;
     private Scene scene;
     private Parent root;
-    @FXML
-    private String paymentType;
     private String productRetrieval;
     private ArrayList<Customer> customers;
 
     @FXML
-    private Button home;
-    @FXML
-    private Label accountInformation;
+    private String paymentType;
     @FXML
     private RadioButton pickUp;
     @FXML
     private RadioButton delivery;
     @FXML
-    private Line headerBorder;
-    @FXML
-    private Label phoneNumber;
-    @FXML
     private TextField phoneNumberTextField;
-    @FXML
-    private Label password;
     @FXML
     private TextField passwordTextField;
     @FXML
-    private Label firstName;
-    @FXML
     private TextField firstNameTextField;
-    @FXML
-    private Label lastName;
     @FXML
     private TextField lastNameTextField;
     @FXML
-    private Label streetAddress;
-    @FXML
     private TextField streetAddressTextField;
-    @FXML
-    private Label state;
     @FXML
     private TextField stateTextField;
     @FXML
-    private Label city;
-    @FXML
     private TextField cityTextField;
     @FXML
-    private Label zipCode;
-    @FXML
     private TextField zipCodeTextField;
-/*
-    @FXML
-    private Label paymentType;
-*/
-    @FXML
-    private HBox box;
     @FXML
     private RadioButton cash;
     @FXML
@@ -92,21 +61,18 @@ public class accountController{
     @FXML
     private TextField creditCardSecurityNumberTextField;
     @FXML
-    private Button confirm;
-    @FXML
     private Label accountSuccess;
     @FXML
     private Label accountFailure;
-    @FXML
-    private Pane child;
      @FXML
     private ListView<String> list;
-    //events
+
+    //**Events**//
+    //Home Button Click//
+    //Once this button is pressed the page switches to the home page, and sets the homepages' dynamics up.
     @FXML
-    //home button click
-    //changes scenes and sets the homepages' dynamics up that are related to this scene
     protected void onHomeButtonClick(ActionEvent actionEvent) throws IOException{
-        FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("homePage.fxml"));
+        FXMLLoader loader = new FXMLLoader(MomAndPopsPizzeria.class.getResource("homePage.fxml"));
         root = loader.load();
         homePageController hpc = loader.getController();
         if(customers!=null){
@@ -127,9 +93,10 @@ public class accountController{
         stage.show();
 
     }
+    //Credit Card Payment Selected//
+    //De-selects any of the other buttons if they are selected and shows the fields related to credit card for the user.
     @FXML
-    //credit card payment selected (also not selected(?))
-    protected void onCreditCardRadioSelected(ActionEvent actionEvent){
+    protected void onCreditCardRadioSelected(){
         if(creditCard.isSelected()){
             cash.setSelected(false);
             check.setSelected(false);
@@ -146,9 +113,10 @@ public class accountController{
             creditCardSecurityNumberTextField.setVisible(false);
         }
     }
-    //pick-up or delivery radio buttons selected
+    //Pick-up / Delivery Radio Buttons Selected//
+    //Sets up a string depending on which radio button is selected out of the group.
     @FXML
-    protected void onProductRetrievalSelected(ActionEvent actionEvent){
+    protected void onProductRetrievalSelected(){
         if(pickUp.isSelected()){
             delivery.setSelected(false);
             productRetrieval="Pick-up";
@@ -157,9 +125,10 @@ public class accountController{
             productRetrieval="Delivery";
         }
     }
+    //Confirm Button Click
+    //Creates the customer account and stores it.
     @FXML
-    //on confirm button click
-    protected void onConfirmButtonClick(ActionEvent actionEvent){
+    protected void onConfirmButtonClick(){
         if(customers ==null&&!phoneNumberTextField.getText().equals("")&&!passwordTextField.getText().equals("")&&!firstNameTextField.getText().equals("")&&!paymentType.equals("")&&!productRetrieval.equals("")) {
             customers = new ArrayList<>();
             customers.add(new Customer(phoneNumberTextField.getText(), passwordTextField.getText(), firstNameTextField.getText(), lastNameTextField.getText(), streetAddressTextField.getText(), stateTextField.getText(), cityTextField.getText(), zipCodeTextField.getText(), creditCardNumberTextField.getText(), creditCardSecurityNumberTextField.getText(),paymentType,productRetrieval));
@@ -171,9 +140,10 @@ public class accountController{
             accountFailure.setVisible(true);
         }
     }
+    //Radio Button Selection
+    //De-selected the other radio button if they are selected and sets the credit card fields to invisible if they are showing.
     @FXML
-    //on radio button selection
-    protected void onRadioButtonSelected(ActionEvent actionEvent){
+    protected void onRadioButtonSelected(){
         if(cash.isSelected()){
             check.setSelected(false);
             creditCard.setSelected(false);
@@ -192,11 +162,11 @@ public class accountController{
             paymentType="Check";
         }
     }
-    //algorithms
-    //getter for arraylist
+    //Algorithms//
+    //Getter for arraylist
     public ArrayList<Customer> getCustomers(){return customers;}
 
-    //setter for listview
+    //Setter for listview
     public void setListView(ListView<String> order){
         if(list==null){
             list = new ListView<>();
@@ -205,7 +175,7 @@ public class accountController{
         }
 
     }
-    //setCustomers
+    //Setter for customers
     public void setCustomers(ArrayList<Customer> customersList){
         if(customers==null) {
             customers = customersList;

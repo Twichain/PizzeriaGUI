@@ -1,14 +1,13 @@
 package com.example.momandpopspizzeria.Controllers;
 
 import com.example.momandpopspizzeria.ClassObjects.Customer;
-import com.example.momandpopspizzeria.HelloApplication;
+import com.example.momandpopspizzeria.MomAndPopsPizzeria;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.stage.Stage;
@@ -16,19 +15,15 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.ArrayList;
 
-//this class stores the functionalities for the confirmation page
+//This class stores the functionalities for the confirmation page
 public class confirmationController {
-    //attributes
+    //Attributes
     private Stage stage;
     private Scene scene;
     private Parent root;
     private ArrayList<Customer> customers;
     private ArrayList<String> orders;
 
-    @FXML
-    private Button home;
-    @FXML
-    private Button submit;
     @FXML
     private ListView<String> order;
     @FXML
@@ -43,11 +38,12 @@ public class confirmationController {
     private Label processed;
 
     //**EVENTS**//
-    //home button
+    //Home Button//
+    //Sets up the home page
     @FXML
     protected void onHomeButtonClick(ActionEvent actionEvent) throws IOException {
         processed.setVisible(false);
-        FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("homePage.fxml"));
+        FXMLLoader loader = new FXMLLoader(MomAndPopsPizzeria.class.getResource("homePage.fxml"));
         root = loader.load();
         homePageController hpc = loader.getController();
         if(order!=null){
@@ -64,16 +60,15 @@ public class confirmationController {
         stage.setScene(scene);
         stage.show();
     }
-    //submit button (idk returns to the home screen with an empty list)
+    //Submit Button//
+    //Processes the order and clears the forms to allow another order to be processed.
     @FXML
-    protected void onSubmitPress(ActionEvent actionEvent){
+    protected void onSubmitPress(){
         if(orders==null){
             orders = new ArrayList<>();
         }
         processed.setVisible(true);
         orders.add(String.valueOf(order.getItems()));
-        /*System.out.println(orders);
-        System.out.println(customers);*/
         order.getItems().clear();
         customerInformation.getItems().clear();
         subTotal.setText("$0");
@@ -82,7 +77,8 @@ public class confirmationController {
 
     }
 
-    //algorithms
+    //Algorithms//
+    //Setter for list view
     public void setListView(ListView<String> list){
         if(order==null){
             order = new ListView<>();
@@ -90,6 +86,7 @@ public class confirmationController {
             order.getItems().addAll(list.getItems());
         }
     }
+    //Setter for list view
     public void setListView2(ListView<String> list2){
         if(customerInformation==null){
             customerInformation = new ListView<>();
@@ -97,13 +94,13 @@ public class confirmationController {
             customerInformation.getItems().addAll(list2.getItems());
         }
     }
-    //setCustomers
+    //Setter for customers
     public void setCustomers(ArrayList<Customer> customersList){
         if(customers==null) {
             customers = customersList;
         }
     }
-    //label setters
+    //Setters for labels
     public void setTotals(){
         if(subTotal==null){
             subTotal = new Label();
@@ -114,6 +111,7 @@ public class confirmationController {
         if(total==null){
             total = new Label();
         }
+        //if and for loop to get the sum from the list view
         if(order!=null){
             double subTotalNum =0;
             for(int i=0; i<order.getItems().size();i++){

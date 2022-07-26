@@ -1,7 +1,7 @@
 package com.example.momandpopspizzeria.ClassObjects;
-//this class holds the constructor for the customer accounts.
+//This class holds the constructor for the customer accounts.
 public class Customer {
-    //attributes
+    //Attributes
     private String phoneNumber;
     private String password;
     private String firstName;
@@ -15,6 +15,7 @@ public class Customer {
     private String paymentType;
     private String productRetrievalMethod;
 
+    //Constructor
     public Customer(String phoneNumber, String password, String firstName, String lastName, String streetAddress, String state, String city, String zipCode, String creditCardNumber, String creditCardSecurityNumber, String paymentType, String productRetrievalMethod){
         this.phoneNumber=phoneNumber;
         this.password=password;
@@ -30,7 +31,7 @@ public class Customer {
         this.productRetrievalMethod=productRetrievalMethod;
     }
 
-    //getters
+    //Getters
     public String getPhoneNumber(){return phoneNumber;}
     public String getPassword(){return password;}
     public String getFirstName(){return firstName;}
@@ -43,7 +44,8 @@ public class Customer {
     public String getCreditCardSecurityNumber() {return creditCardSecurityNumber;}
     public String getPaymentType(){return paymentType;}
     public String getProductRetrievalMethod() {return productRetrievalMethod;}
-    //setters
+
+    //Setters
     public void setPhoneNumber(String input){this.phoneNumber=input;}
     public void setPassword(String input){this.password=input;}
     public void setFirstName(String input){this.firstName=input;}
@@ -57,7 +59,7 @@ public class Customer {
     public void setPaymentType(String input){this.paymentType=input;}
     public void setProductRetrievalMethod(String productRetrievalMethod) {this.productRetrievalMethod = productRetrievalMethod;}
 
-    //extra methods
+    //toString
     @Override
     public String toString() {
         return "Customer{" +

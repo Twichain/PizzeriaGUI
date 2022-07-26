@@ -1,16 +1,17 @@
 package com.example.momandpopspizzeria.ClassObjects;
-//this holds the constructor for the beverages
+//This holds the constructor for the beverages
 public class Beverages {
+    //Attributes
     private String drinkName;
-
+    //Constructor
     public Beverages(String drinkName){
         this.drinkName=drinkName;
     }
 
-    //getters
+    //Getters
     public String getDrinkName() {return drinkName;}
 
-    //setters
+    //Setters
     public void setDrinkName(String drinkName) {this.drinkName = drinkName;}
 
     //toString

@@ -1,21 +1,21 @@
 package com.example.momandpopspizzeria.ClassObjects;
-//this holds the constructor for the sides **** may not be used? ****
+//This holds the constructor for the sides **** may not be used? ****
 public class Sides {
-    //attributes
+    //Attributes
     String side;
     double price;
 
-    //constructor
+    //Constructor
     public Sides(String side, double price){
         this.side = side;
         this.price = price;
     }
 
-    //getters
+    //Getters
     public double getPrice() {return price;}
     public String getSide() {return side;}
 
-    //setters
+    //Setters
     public void setSide(String side) {this.side = side;}
     public void setPrice(double price) {this.price = price;}
 
